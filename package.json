@@ -1,0 +1,19 @@
+{
+    "name": "mati",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "ts": "tsc --watch",
+        "scss": "node-sass --watch src/scss/main.scss dist/css/main.css",
+        "dev": "npm-run-all --parallel ts scss"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^7.0.1",
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.50.0"
+    }
+}

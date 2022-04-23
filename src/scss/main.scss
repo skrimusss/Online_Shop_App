@@ -1,0 +1,17 @@
+@import './modules/variables';
+@import './layout/nav';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--black2);
+    font-family: var(--body-font);
+}
