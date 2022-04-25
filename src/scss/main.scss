@@ -1,5 +1,11 @@
 @import './modules/variables';
+@import './modules/space-classes';
+@import './modules/theme';
+@import './modules/scrollbar';
+@import './modules/nav-popups';
 @import './layout/nav';
+@import './layout/header';
+@import './layout/account-nav';
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +18,7 @@ html {
 }
 
 body {
-    background-color: var(--black2);
+    background-color: var(--white2);
     font-family: var(--body-font);
+    color: var(--text-color);
 }

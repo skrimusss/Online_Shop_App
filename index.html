@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Website</title>
+    <title>My clothes</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,38 +15,156 @@
 
 </head>
 
-<body data-theme="light">
-    <nav aria-expanded="false" class="nav">
-        <button class="nav__menu-button">
-            <i class="uil uil-bars"></i>
-        </button>
+<body data-theme="dark">
+    <div class="background-click-area"></div>
+    <nav class="account-nav">
+        <div class="account-nav__modules wrapper horizontal-padding">
+            <button class="account-nav__menu-button">
+                <i class="uil uil-bars"></i>
+            </button>
 
-        <div class="nav__modules">
-            <button class="nav__modules--header"><i class="uil uil-times"></i></button>
+            <div class="main-logo">
+                <p><i class="uil uil-shopping-bag"></i>My Shop</p>
+            </div>
 
-            <a class="nav__modules--link">
-                    Home
-            </a>
+            <div class="account-nav__modules--container">
 
-            <a class="nav__modules--link">
-                Sneakers
-            </a>
+                <p class="account-nav__modules--link user-link">
 
-            <a class="nav__modules--link">
-                T-shirts
-            </a>
+                    <i class="uil uil-user"></i>
 
-            <a class="nav__modules--link">
-                Accesories
-            </a>
+                    <div aria-expanded="false" class="login-popup">
+                        <p class="login-popup__title">Hi, Matthew!</p>
+                        <p class="login-popup__subtitle">How're you?</p>
 
-            <a class="nav__modules--link">
-                Perfumes
-            </a>
+                        <div class="login-popup__buttons">
+                            <button class="login-popup__buttons--cart-button user-button">Your cart</button>
+                            <button class="login-popup__buttons--fav-button user-button">Your favourites</button>
+                            <button class="login-popup__buttons--login-button user-button"><i class="uil uil-signin"></i> Logout</button>
+                        </div>
+                    </div>
 
+                </p>
 
+                <p class="account-nav__modules--link fav-link">
+
+                    <i class="uil uil-heart"></i>
+
+                    <div aria-expanded="false" class="fav-popup">
+                        <p class="fav-popup__icon"><i class="uil uil-confused"></i></p>
+                        <p class="fav-popup__text">Favourite list is empty</p>
+                        <button class="fav-popup__button">Add new products!</button>
+                    </div>
+                </p>
+
+                <p class="account-nav__modules--link cart-link">
+
+                    <i class="uil uil-shopping-cart-alt"></i>
+
+                    <div aria-expanded="false" class="cart-popup">
+                        <p class="cart-popup__icon"><i class="uil uil-shopping-cart-alt"></i></p>
+                        <p class="cart-popup__text">Cart is empty</p>
+                        <button class="cart-popup__button">Add new products!</button>
+                    </div>
+
+                </p>
+            </div>
         </div>
     </nav>
+
+    <nav aria-expanded="false" class="nav">
+        <div class="nav__modules">
+            <div class="nav__modules--header">
+                <div class="main-logo">
+                    <p><i class="uil uil-shopping-bag"></i>My Shop</p>
+                </div>
+                <p class="hide-nav-button "><i class="uil uil-times"></i></p>
+            </div>
+
+
+            <div class="accordion">
+                <button class="accordion__header">
+                    <p class="accordion__header--title">Sneakers</p>
+                    <p class="accordion__header--arrow"><i class="uil uil-angle-down"></i></p>
+                </button>
+                <div aria-expanded="true" class="accordion__content">
+                    <a class="nav__modules--link">
+                        Adidas
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Nike
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Jordan
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Premium
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="accordion">
+                <button class="accordion__header">
+                    <p class="accordion__header--title">Clothes</p>
+                    <p class="accordion__header--arrow"><i class="uil uil-angle-down"></i></p>
+                </button>
+                <div aria-expanded="true" class="accordion__content">
+                    <a class="nav__modules--link">
+                        Adidas
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Nike
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Jordan
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Premium
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="accordion">
+                <button class="accordion__header">
+                    <p class="accordion__header--title">Accesories</p>
+                    <p class="accordion__header--arrow"><i class="uil uil-angle-down"></i></p>
+                </button>
+                <div aria-expanded="true" class="accordion__content">
+                    <a class="nav__modules--link">
+                        Adidas
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Nike
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Jordan
+                    </a>
+
+                    <a class="nav__modules--link">
+                        Premium
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav__modules--buttons">
+
+                <button class="theme-button">
+                    <div class="theme-button--circle"></div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
 
     <script type="module" src="dist/js/app.js"></script>
 </body>

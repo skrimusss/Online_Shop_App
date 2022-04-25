@@ -1,27 +1,26 @@
 :root {
     // colors
-    --main: #C33C54;
-    --main-hover: #00aeff;
-    --second: #254E70;
-    --third: #37718E;
-    --fourth: #8EE3EF;
+    --main: #79ddeb;
+    --main-hover: #8EE3EF;
     // white colors
     --white: rgb(255, 255, 255);
-    --white2: rgb(230, 230, 230);
+    --white2: rgb(240, 240, 240);
     --white3: rgb(200, 200, 200);
     --white4: rgb(170, 170, 170);
+    --white-gradient: linear-gradient(90deg, #80dfec48 0%, rgba(255, 255, 255, 1) 27%);
     // black colors
     --black: #111111;
     --black2: rgb(20, 20, 20);
     --black3: rgb(50, 50, 50);
     --black4: rgb(80, 80, 80);
+    --box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.178);
     // font weight
     --bold: 800;
     --normal: 600;
     // font sizes
     --biggest: 3.4rem;
     --big: 2.5rem;
-    --large: 2rem;
+    --large: 1.8rem;
     --medium: 1.6rem;
     --small: 1.3rem;
     // text
