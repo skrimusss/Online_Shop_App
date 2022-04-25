@@ -4,9 +4,6 @@ let backgroundAreaElement: HTMLDivElement = document.querySelector('.background-
 const navLinksElements = Array.from(document.querySelectorAll('.nav__modules--link'))
 const navElement: HTMLElement = document.querySelector('.nav')
 
-const themeButtonElement: HTMLButtonElement = document.querySelector('.theme-button')
-const themeCircleElement: HTMLDivElement = document.querySelector('.theme-button--circle')
-
 const accordionElements = Array.from(document.querySelectorAll('.accordion'))
 
 const loginPopupElement: HTMLDivElement = document.querySelector('.login-popup')
@@ -21,6 +18,9 @@ const favButtonElement: HTMLButtonElement = document.querySelector('.fav-popup__
 const cartPopupElement: HTMLDivElement = document.querySelector('.cart-popup')
 const cartLinkElement: HTMLParagraphElement = document.querySelector('.cart-link')
 const cartPopupButton: HTMLButtonElement = document.querySelector('.cart-popup__button')
+
+const nav: HTMLElement = document.querySelector('.account-nav')
+let checkScroll: any
 
 export const navLogic = () => {
     const navFunctions = () => {
@@ -75,16 +75,6 @@ export const navLogic = () => {
                 })
             }
 
-            const toggleTheme = () => {
-                if (document.body.getAttribute('data-theme') === 'dark') {
-                    document.body.setAttribute('data-theme', 'light')
-                    themeCircleElement.classList.add('toggle-theme-circle')
-                } else {
-                    document.body.setAttribute('data-theme', 'dark')
-                    themeCircleElement.classList.remove('toggle-theme-circle')
-                }
-            }
-
             const accordions = () => {
                 accordionElements.forEach(accordion => {
                     class accordionModules {
@@ -124,7 +114,6 @@ export const navLogic = () => {
                 navToggle()
             })
             navCloseButtonElement.addEventListener('click', navToggle)
-            themeButtonElement.addEventListener('click', toggleTheme)
             accordions()
             removeNavByLinks()
         }
@@ -220,8 +209,54 @@ export const navLogic = () => {
             })
         }
 
+        const navHeightFunction = () => {
+            let doc: HTMLElement = document.documentElement
+            let curScroll: number
+            let prevScroll: number = window.scrollY || doc.scrollTop
+            let curDirection: number
+            let prevDirection: number = 0
+            let toggled: boolean
+
+            let threshold: number = 150
+            let toggleNav: any
+
+            checkScroll = () => {
+                curScroll = window.scrollY || doc.scrollTop
+
+                if (curScroll > prevScroll) {
+                    curDirection = 2
+                } else {
+                    curDirection = 1
+                }
+
+                prevScroll = curScroll
+
+                if (toggled) {
+                    prevDirection = curDirection
+                }
+
+                toggleNav = () => {
+                    toggled = true
+
+                    if (curDirection === 2 && curScroll > threshold) {
+                        nav.style.height = '6rem'
+                    } else if (curDirection === 1) {
+                        nav.style.height = '8rem'
+                    } else {
+                        toggled = false
+                    }
+                    return toggled
+                }
+                toggleNav()
+            }
+        }
+
         chooseNavLogic()
         userNavLogic()
+        navHeightFunction()
+        window.addEventListener('scroll', () => {
+            checkScroll()
+        })
     }
     navFunctions()
 }

@@ -3,27 +3,29 @@
     --main: #79ddeb;
     --main-hover: #8EE3EF;
     // white colors
-    --white: rgb(255, 255, 255);
-    --white2: rgb(240, 240, 240);
-    --white3: rgb(200, 200, 200);
-    --white4: rgb(170, 170, 170);
-    --white-gradient: linear-gradient(90deg, #80dfec48 0%, rgba(255, 255, 255, 1) 27%);
-    // black colors
-    --black: #111111;
-    --black2: rgb(20, 20, 20);
-    --black3: rgb(50, 50, 50);
-    --black4: rgb(80, 80, 80);
-    --box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.178);
+    --white: #0a0c11;
+    --white2: #0e1018;
+    --white3: #131620;
+    --white-gradient: linear-gradient(90deg, #80dfec48 0%, #0e1018 27%);
+    --card-white-gradient: linear-gradient(90deg, #80dfec48 0%, #131620 27%);
     // font weight
     --bold: 800;
     --normal: 600;
     // font sizes
-    --biggest: 3.4rem;
+    --header: 3.5rem;
+    --biggest: 2.5rem;
     --big: 2.5rem;
     --large: 1.8rem;
     --medium: 1.6rem;
     --small: 1.3rem;
     // text
-    --text-color: rgb(50, 50, 50);
+    --text-color: white;
     --body-font: 'Inter', sans-serif;
+}
+
+@media screen and (min-width: 500px) {
+     :root {
+        --header: 4.5rem;
+        --biggest: 3.4rem;
+    }
 }

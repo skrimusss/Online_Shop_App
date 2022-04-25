@@ -1,10 +1,15 @@
 body {
     &::-webkit-scrollbar-thumb {
-        background-color: var(--white4);
+        background-color: var(--white3);
         border-radius: 20rem;
     }
     &::-webkit-scrollbar {
-        background-color: var(--white3);
+        background-color: var(--white);
         width: 1rem;
     }
+}
+
+ ::selection {
+    background-color: var(--main);
+    color: white;
 }

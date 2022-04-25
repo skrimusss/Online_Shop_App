@@ -3,8 +3,6 @@ const navCloseButtonElement = document.querySelector('.hide-nav-button');
 let backgroundAreaElement = document.querySelector('.background-click-area');
 const navLinksElements = Array.from(document.querySelectorAll('.nav__modules--link'));
 const navElement = document.querySelector('.nav');
-const themeButtonElement = document.querySelector('.theme-button');
-const themeCircleElement = document.querySelector('.theme-button--circle');
 const accordionElements = Array.from(document.querySelectorAll('.accordion'));
 const loginPopupElement = document.querySelector('.login-popup');
 const userLinkElement = document.querySelector('.user-link');
@@ -16,6 +14,8 @@ const favButtonElement = document.querySelector('.fav-popup__button');
 const cartPopupElement = document.querySelector('.cart-popup');
 const cartLinkElement = document.querySelector('.cart-link');
 const cartPopupButton = document.querySelector('.cart-popup__button');
+const nav = document.querySelector('.account-nav');
+let checkScroll;
 export const navLogic = () => {
     const navFunctions = () => {
         const removeNavProperties = () => {
@@ -62,16 +62,6 @@ export const navLogic = () => {
                     });
                 });
             };
-            const toggleTheme = () => {
-                if (document.body.getAttribute('data-theme') === 'dark') {
-                    document.body.setAttribute('data-theme', 'light');
-                    themeCircleElement.classList.add('toggle-theme-circle');
-                }
-                else {
-                    document.body.setAttribute('data-theme', 'dark');
-                    themeCircleElement.classList.remove('toggle-theme-circle');
-                }
-            };
             const accordions = () => {
                 accordionElements.forEach(accordion => {
                     class accordionModules {
@@ -110,7 +100,6 @@ export const navLogic = () => {
                 navToggle();
             });
             navCloseButtonElement.addEventListener('click', navToggle);
-            themeButtonElement.addEventListener('click', toggleTheme);
             accordions();
             removeNavByLinks();
         };
@@ -194,8 +183,49 @@ export const navLogic = () => {
                 removeCartPopupProperties();
             });
         };
+        const navHeightFunction = () => {
+            let doc = document.documentElement;
+            let curScroll;
+            let prevScroll = window.scrollY || doc.scrollTop;
+            let curDirection;
+            let prevDirection = 0;
+            let toggled;
+            let threshold = 150;
+            let toggleNav;
+            checkScroll = () => {
+                curScroll = window.scrollY || doc.scrollTop;
+                if (curScroll > prevScroll) {
+                    curDirection = 2;
+                }
+                else {
+                    curDirection = 1;
+                }
+                prevScroll = curScroll;
+                if (toggled) {
+                    prevDirection = curDirection;
+                }
+                toggleNav = () => {
+                    toggled = true;
+                    if (curDirection === 2 && curScroll > threshold) {
+                        nav.style.height = '6rem';
+                    }
+                    else if (curDirection === 1) {
+                        nav.style.height = '8rem';
+                    }
+                    else {
+                        toggled = false;
+                    }
+                    return toggled;
+                };
+                toggleNav();
+            };
+        };
         chooseNavLogic();
         userNavLogic();
+        navHeightFunction();
+        window.addEventListener('scroll', () => {
+            checkScroll();
+        });
     };
     navFunctions();
 };

@@ -2,17 +2,18 @@
         position: fixed;
         width: 40rem;
         height: 100vh;
-        background-color: var(--white);
+        background-color: var(--white2);
         transform: translateX(-100%);
         transition: transform .2s ease;
         box-shadow: var(--box-shadow);
         overflow-y: scroll;
+        z-index: 200;
         &::-webkit-scrollbar-thumb {
-            background-color: var(--white3);
+            background-color: var(--white);
             border-radius: 20rem;
         }
         &::-webkit-scrollbar {
-            background-color: var(--white);
+            background-color: var(--white2);
             width: 1rem;
         }
         &__modules {
@@ -36,7 +37,7 @@
                     background: none;
                     border: none;
                     &:hover {
-                        background: var(--white2);
+                        background: var(--white3);
                     }
                     i {
                         color: var(--black2);
@@ -54,7 +55,7 @@
                     cursor: pointer;
                     border: none;
                     color: var(--text);
-                    background: var(--white2);
+                    background: var(--white3);
                     padding: 1rem 2rem;
                     border-radius: 1rem;
                     margin-bottom: 1rem;
@@ -112,38 +113,6 @@
                     background: none;
                     cursor: pointer;
                 }
-                .theme-button {
-                    width: 7rem;
-                    height: 3rem;
-                    border-radius: 50rem;
-                    background-color: var(--white3);
-                    &--circle {
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                        margin-left: .8rem;
-                        background-color: var(--white2);
-                        transition: transform .2s ease;
-                    }
-                    .toggle-theme-circle {
-                        transform: translateX(3.5rem);
-                    }
-                }
-                .login-button {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 5rem;
-                    height: 5rem;
-                    border-radius: 50%;
-                    i {
-                        font-size: var(--big);
-                        color: var(--main);
-                    }
-                    &:hover {
-                        background: var(--white2);
-                    }
-                }
             }
         }
     }
@@ -158,6 +127,7 @@
         width: 100%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.164);
+        z-index: 150;
     }
     
     @media screen and (max-width: 550px) {

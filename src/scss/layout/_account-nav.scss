@@ -8,6 +8,9 @@
     background-color: var(--white);
     width: 100%;
     box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
+    transition: height .2s ease;
+    z-index: 199;
     &__modules {
         display: flex;
         justify-content: space-between;
@@ -29,7 +32,7 @@
             margin-left: 2rem;
             cursor: pointer;
             &:hover {
-                background-color: var(--white2);
+                background-color: var(--white3);
             }
         }
     }
@@ -44,10 +47,10 @@
         background: none;
         border: none;
         &:hover {
-            background: var(--white2);
+            background: var(--white3);
         }
         i {
-            color: var(--black2);
+            color: var(--text-color);
             font-size: var(--big);
         }
     }
