@@ -57,6 +57,10 @@
             font-size: var(--medium);
             color: white;
             margin: 2rem;
+            transition: transform .2s ease;
+            &:active {
+                transform: scale(0.96);
+            }
             &:hover {
                 background: var(--main-hover);
             }

@@ -9,11 +9,12 @@
         overflow-y: scroll;
         z-index: 200;
         &::-webkit-scrollbar-thumb {
-            background-color: var(--white);
+            background-color: var(--white3);
             border-radius: 20rem;
+            border: 1px solid var(--white4);
         }
         &::-webkit-scrollbar {
-            background-color: var(--white2);
+            background-color: var(--white);
             width: 1rem;
         }
         &__modules {

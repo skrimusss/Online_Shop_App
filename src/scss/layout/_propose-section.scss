@@ -51,6 +51,7 @@
             z-index: 100;
             width: 100%;
             padding: 0 5rem;
+            pointer-events: none;
             button {
                 font-size: var(--biggest);
                 backdrop-filter: blur(8px);
@@ -62,6 +63,7 @@
                 background: var(--white4);
                 color: var(--text-color);
                 transition: background .1s ease;
+                pointer-events: all;
                 &:active {
                     background: var(--main);
                 }

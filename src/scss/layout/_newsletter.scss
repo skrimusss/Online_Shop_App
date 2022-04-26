@@ -1,0 +1,135 @@
+.newsletter {
+    background-color: var(--white);
+    padding: 5rem 0;
+    &__title {
+        margin-bottom: 2rem;
+        h4 {
+            font-size: var(--biggest);
+        }
+        p {
+            font-size: var(--large);
+            color: var(--grey);
+        }
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .img {
+            position: absolute;
+            right: 0;
+            padding-right: 3rem;
+            img {
+                transform: rotate(-15deg);
+                transition: transform .2s ease;
+                width: 75rem;
+                z-index: -1;
+                padding-bottom: 5rem;
+                &:hover {
+                    transform: rotate(-20deg);
+                }
+            }
+        }
+    }
+    &__modules {
+        form {
+            z-index: 1;
+            width: 70rem;
+            max-width: 70rem;
+            display: flex;
+            flex-direction: column;
+            label {
+                padding: 0 0 1.5rem 0;
+                font-size: var(--large);
+                i {
+                    padding-right: 1rem;
+                }
+            }
+            input {
+                padding: 1.5rem 2rem;
+                font-size: var(--large);
+                background: var(--white3);
+                border-radius: 1rem;
+                outline: none;
+                border: none;
+                margin-bottom: 3rem;
+                color: var(--grey);
+                &:focus {
+                    background: var(--white4);
+                }
+            }
+            button {
+                padding: 1.3rem 1rem;
+                border-radius: 1rem;
+                background: var(--main);
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: var(--large);
+                transition: transform .2s ease;
+                &:active {
+                    transform: scale(0.96);
+                }
+                &:hover {
+                    background: var(--main-hover);
+                }
+            }
+            .error {
+                display: none;
+                font-size: var(--medium);
+                color: var(--main);
+                margin-bottom: 2rem;
+            }
+            .privacy {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+                input {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    cursor: pointer;
+                    margin-bottom: 0;
+                    margin-right: 1.5rem;
+                    &:active {
+                        transform: scale(1.2);
+                    }
+                }
+                p {
+                    font-size: var(--medium);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .newsletter {
+        &__title {
+            text-align: center;
+        }
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .newsletter {
+        &__content {
+            .img {
+                img {
+                    width: 55rem;
+                }
+            }
+        }
+    }
+}
