@@ -4,6 +4,7 @@
   --white: #0a0c11;
   --white2: #0e1018;
   --white3: #131620;
+  --white4: #24293a;
   --white-gradient: linear-gradient(90deg, #80dfec48 0%, #0e1018 27%);
   --card-white-gradient: linear-gradient(90deg, #80dfec48 0%, #131620 27%);
   --bold: 800;
@@ -37,7 +38,8 @@
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--white3);
-  border-radius: 20rem; }
+  border-radius: 20rem;
+  border: 1px solid var(--white4); }
 
 body::-webkit-scrollbar {
   background-color: var(--white);
@@ -412,7 +414,8 @@ body::-webkit-scrollbar {
 .propose__title {
   display: flex;
   align-items: center;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  flex-wrap: wrap; }
   .propose__title h3 {
     font-size: var(--big);
     padding-right: 3rem; }
@@ -442,17 +445,45 @@ body::-webkit-scrollbar {
       padding-left: 3rem;
       background: var(--white-gradient); }
 
+.propose__arrows-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .propose__arrows-box--buttons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    width: 100%;
+    padding: 0 5rem; }
+    .propose__arrows-box--buttons button {
+      font-size: var(--biggest);
+      backdrop-filter: blur(8px);
+      border-radius: 50%;
+      height: 4rem;
+      width: 4rem;
+      cursor: pointer;
+      border: none;
+      background: var(--white4);
+      color: var(--text-color);
+      transition: background .1s ease; }
+      .propose__arrows-box--buttons button:active {
+        background: var(--main); }
+
 .propose__modules {
+  position: relative;
   display: flex;
   justify-content: flex-start;
-  overflow-x: auto;
+  align-items: center;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
   padding-bottom: 2rem; }
   .propose__modules::-webkit-scrollbar-thumb {
-    background-color: var(--white3);
-    border-radius: 20rem; }
+    display: none; }
   .propose__modules::-webkit-scrollbar {
-    background-color: var(--white);
-    height: 1.3rem; }
+    display: none; }
   .propose__modules--box {
     display: flex;
     flex-direction: column;
@@ -467,7 +498,8 @@ body::-webkit-scrollbar {
       width: 35rem;
       max-height: 40rem;
       object-fit: cover;
-      transition: transform .2s ease; }
+      transition: transform .2s ease;
+      overflow: hidden; }
       .propose__modules--box img:hover {
         transform: scale(1.07); }
     .propose__modules--box .content {
@@ -513,6 +545,63 @@ body::-webkit-scrollbar {
           .propose__modules--box .content__options--add-cart:hover {
             padding-left: 3rem;
             background: var(--card-white-gradient); }
+
+.advertisement {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center; }
+  .advertisement::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/c7b2b778-a1de-4a1f-a447-44d808bd789e/image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: -1; }
+  .advertisement__bottom-wave {
+    position: absolute;
+    line-height: 0;
+    width: 100%;
+    bottom: -1px;
+    left: 0; }
+  .advertisement__top-wave {
+    position: absolute;
+    line-height: 0;
+    width: 100%;
+    top: -1px;
+    left: 0; }
+  .advertisement__modules {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .advertisement__modules h2 {
+      font-size: var(--header);
+      color: var(--main); }
+    .advertisement__modules p {
+      font-size: var(--medium); }
+    .advertisement__modules button {
+      position: relative;
+      background: var(--main);
+      padding: 1.2rem 3rem;
+      border-radius: 1rem;
+      margin-top: 2rem;
+      border: none;
+      cursor: pointer;
+      font-size: var(--medium);
+      color: white;
+      margin: 2rem; }
+      .advertisement__modules button:hover {
+        background: var(--main-hover); }
 
 * {
   box-sizing: border-box;

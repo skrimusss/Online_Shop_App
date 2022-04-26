@@ -1,0 +1,65 @@
+.advertisement {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url('https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/c7b2b778-a1de-4a1f-a447-44d808bd789e/image.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        z-index: -1;
+    }
+    &__bottom-wave {
+        position: absolute;
+        line-height: 0;
+        width: 100%;
+        bottom: -1px;
+        left: 0;
+    }
+    &__top-wave {
+        position: absolute;
+        line-height: 0;
+        width: 100%;
+        top: -1px;
+        left: 0;
+    }
+    &__modules {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            font-size: var(--header);
+            color: var(--main);
+        }
+        p {
+            font-size: var(--medium);
+        }
+        button {
+            position: relative;
+            background: var(--main);
+            padding: 1.2rem 3rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+            border: none;
+            cursor: pointer;
+            font-size: var(--medium);
+            color: white;
+            margin: 2rem;
+            &:hover {
+                background: var(--main-hover);
+            }
+        }
+    }
+}
