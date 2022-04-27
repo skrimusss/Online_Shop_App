@@ -2,7 +2,6 @@ const arrowContainers = document.querySelectorAll('.propose__arrows-box')
 
 export const recommendedLogic = () => {
     arrowContainers.forEach(arrowContainer => {
-
             class sliderModules {
                 rightButton: HTMLButtonElement = arrowContainer.querySelector('.right-button')
                 leftButton: HTMLButtonElement = arrowContainer.querySelector('.left-button')
