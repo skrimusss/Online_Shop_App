@@ -17,11 +17,18 @@
 
 <body>
     <div class="background-click-area"></div>
+    <div class="scroll-top-button horizontal-padding wrapper">
+        <p><i class="uil uil-arrow-up"></i></p>
+    </div>
     <nav class="account-nav">
         <div class="account-nav__modules wrapper horizontal-padding">
             <button class="account-nav__menu-button">
                 <i class="uil uil-bars"></i>
             </button>
+
+            <div class="main-logo mobile-nav-logo">
+                <img src="/src/img/logosvg.svg" alt="logo">
+            </div>
 
             <div class="account-nav__modules--container">
                 <p class="account-nav__modules--link user-link">
@@ -55,6 +62,9 @@
                         <button class="cart-popup__button">Add new products!</button>
                     </div>
                 </p>
+                <p class="account-nav__modules--link cart-link contact-nav-link">
+                    <i class="uil uil-phone-alt"></i>
+                </p>
             </div>
         </div>
     </nav>
@@ -63,7 +73,7 @@
         <div class="nav__modules">
             <div class="nav__modules--header">
                 <div class="main-logo">
-                    <p><i class="uil uil-shopping-bag"></i>My Shop</p>
+                    <img src="/src/img/logosvg.svg" alt="logo">
                 </div>
                 <p class="hide-nav-button "><i class="uil uil-times"></i></p>
             </div>
@@ -127,12 +137,15 @@
                     </a>
                 </div>
             </div>
+            <button class="contact-button">
+                <i class="uil uil-phone-alt"></i>
+                Contact us
+            </button>
         </div>
     </nav>
 
     <header class="header">
         <div class="header__modules">
-
             <div class="header__modules--content">
                 <h1>Our explosive new lineup</h1>
                 <h3>Best Delivery</h3>
@@ -386,44 +399,6 @@
                 </div>
             </div>
         </section>
-        <section class="newsletter vertical-margin">
-            <div class="newsletter__modules wrapper horizontal-padding">
-                <div class="newsletter__title">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to the newsletter</p>
-                </div>
-
-                <div class="newsletter__content">
-                    <form>
-                        <label for="name">
-                        <i class="uil uil-user"></i>
-                        Name
-                    </label>
-                        <input autocomplete="off" placeholder="Type your name" type="text" id="name">
-
-                        <label for="email">
-                        <i class="uil uil-envelope-alt"></i>
-                        Email
-                    </label>
-                        <input autocomplete="off" placeholder="Type your email" type="email" id="email">
-
-                        <div class="privacy">
-                            <input type="checkbox" id="privacy-checkbox">
-                            <p>Are you accept privacy policy?</p>
-                        </div>
-
-                        <p class="error">Complete the fields!</p>
-
-                        <button class="submit-button">Submit</button>
-                    </form>
-
-                    <div class="img">
-                        <img src="/src/img/vapormaxnewsletter.png" alt="vapormax">
-                    </div>
-                </div>
-
-            </div>
-        </section>
         <section class="propose vertical-margin horizontal-padding wrapper">
             <div class="propose__title">
                 <h3>Recommended</h3>
@@ -519,50 +494,171 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
-            <div class="contact__modules wrapper horizontal-padding vertical-margin">
-                <label for="name">Name</label>
-                <input type="text" id="name">
+        <section class="newsletter vertical-margin">
+            <div class="newsletter__modules wrapper horizontal-padding">
+                <div class="newsletter__title">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to the newsletter</p>
+                </div>
 
-                <label for="number">Phone number<span>Optional</span></label>
-                <input type="tel" id="number">
+                <div class="newsletter__content">
+                    <form>
+                        <label for="name">
+                        <i class="uil uil-user"></i>
+                        Name
+                    </label>
+                        <input autocomplete="off" placeholder="Type your name" type="text" id="name">
 
-                <label for="text">Description</label>
-                <textarea id="text" cols="30" rows="10"></textarea>
+                        <label for="email">
+                        <i class="uil uil-envelope-alt"></i>
+                        Email
+                    </label>
+                        <input autocomplete="off" placeholder="Type your email" type="email" id="email">
+
+                        <div class="privacy">
+                            <input type="checkbox" id="privacy-checkbox">
+                            <p>Are you accept privacy policy?</p>
+                        </div>
+
+                        <p class="error">Complete the fields!</p>
+
+                        <button class="submit-button">Submit</button>
+                    </form>
+
+                    <div class="img">
+                        <img src="/src/img/vapormaxnewsletter.png" alt="vapormax">
+                    </div>
+                </div>
 
             </div>
         </section>
+
+        <section aria-expanded="false" class="contact">
+            <div class="contact__modules wrapper horizontal-padding vertical-margin">
+                <div class="contact__hide-button">
+                    <i class="uil uil-times"></i>
+                </div>
+                <form>
+                    <div class="one-box">
+
+                        <div class="one-box__row">
+
+                            <label for="contact-name"><i class="uil uil-user"></i>Name</label>
+                            <input type="text" id="contact-name">
+                        </div>
+
+                        <div class="one-box__row">
+                            <label for="number"><i class="uil uil-phone"></i>Phone number<span>Optional</span></label>
+                            <input type="tel" id="number">
+                        </div>
+
+                    </div>
+                    <label for="contact-text">Description</label>
+                    <textarea id="contact-text" cols="30" rows="10"></textarea>
+                    <div class="privacy">
+                        <input type="checkbox" id="contact-privacy-checkbox">
+                        <p>Are you accept privacy policy?</p>
+                    </div>
+                    <p class="contact-error">Complete the fields!</p>
+                    <button class="contact-submit-button">Submit</button>
+                </form>
+            </div>
+        </section>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+    <footer class="footer">
+        <div class="footer__modules wrapper horizontal-padding">
+            <div class="footer__modules--logo">
+                <div class="main-logo">
+                    <img src="/src/img/logosvg.svg" alt="logo">
+                </div>
+
+                <button class="contact-button">
+                    <i class="uil uil-phone-alt"></i>
+                    Contact us
+                </button>
+            </div>
+
+            <div class="footer__modules--contact">
+                <div class="box">
+                    <p class="box__main-icon">
+                        <i class="uil uil-map-marker-alt"></i>
+                    </p>
+                    <div class="box__main">
+                        <div class="box__main--text">
+                            <p>Adress</p>
+                            <h3>Convalian 3</h3>
+                        </div>
+
+                        <div class="box__main--text">
+                            <p>Post Code</p>
+                            <h3>11201</h3>
+                        </div>
+
+                        <div class="box__main--text">
+                            <p>Country</p>
+                            <h3>Canada</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__modules--contact">
+
+                <div class="box">
+                    <p class="box__main-icon">
+                        <i class="uil uil-apps"></i>
+                    </p>
+                    <div class="box__main">
+                        <div class="box__main--text">
+                            <p>Clothes</p>
+                            <a href="/">Premium</a>
+                        </div>
+
+                        <div class="box__main--text">
+                            <p>Sneakers</p>
+                            <a href="/">Nike</a>
+                        </div>
+
+                        <div class="box__main--text">
+                            <p>Accesories</p>
+                            <a href="/">Caps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__modules--contact">
+
+                <div class="box">
+                    <p class="box__main-icon">
+                        <i class="uil uil-share"></i>
+                    </p>
+                    <div class="box__main">
+                        <div class="box__main--text">
+                            <p>Photos</p>
+                            <a href="/">Instagram</a>
+                        </div>
+
+                        <div class="box__main--text">
+                            <p>News</p>
+                            <a href="/">Facebook</a>
+                        </div>
+
+                        <div class="box__main--text">
+                            <p>Portfolio</p>
+                            <a href="/">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="footer__modules--bottom-text">
+            <p>My Shop by Mateusz Michalik | &copy; 2022</p>
+        </div>
+    </footer>
     <script type="module" src="dist/js/app.js"></script>
 </body>
 

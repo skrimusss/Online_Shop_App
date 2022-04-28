@@ -1,0 +1,194 @@
+    .contact {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        z-index: 198;
+        padding: 0 2rem;
+        visibility: hidden;
+        transform: translateY(10rem);
+        opacity: 0;
+        transition: transform .2s ease, opacity .2s ease, visibility .2s ease;
+        &__hide-button {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 2rem;
+            top: 2rem;
+            cursor: pointer;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            &:hover {
+                background-color: var(--white4);
+            }
+            i {
+                font-size: var(--big);
+            }
+        }
+        &__modules {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 2rem;
+            max-width: 100rem;
+            border-radius: 1rem;
+            background-color: var(--white);
+            form {
+                z-index: 1;
+                width: 100%;
+                max-width: 90rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .one-box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &__row {
+                        display: flex;
+                        flex-direction: column;
+                        width: 40rem;
+                    }
+                }
+                label {
+                    padding: 0 0 1.5rem 1rem;
+                    font-size: var(--large);
+                    i {
+                        padding-right: 1rem;
+                    }
+                    span {
+                        padding-left: 1rem;
+                        color: var(--grey);
+                    }
+                }
+                input {
+                    padding: 1.5rem 2rem;
+                    font-size: var(--large);
+                    background: var(--white3);
+                    border-radius: 1rem;
+                    outline: none;
+                    border: none;
+                    margin-bottom: 3rem;
+                    color: var(--grey);
+                    &:focus {
+                        background: var(--white4);
+                    }
+                }
+                button {
+                    padding: 1.3rem 1rem;
+                    border-radius: 1rem;
+                    background: var(--main);
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    font-size: var(--large);
+                    transition: transform .2s ease;
+                    &:active {
+                        transform: scale(0.96);
+                    }
+                    &:hover {
+                        background: var(--main-hover);
+                    }
+                }
+                textarea {
+                    font-family: var(--body-font);
+                    font-weight: var(--bold);
+                    padding: 1.5rem 2rem;
+                    font-size: var(--large);
+                    background: var(--white3);
+                    border-radius: 1rem;
+                    outline: none;
+                    border: none;
+                    margin-bottom: 3rem;
+                    color: var(--grey);
+                    max-height: 30rem;
+                    resize: none;
+                    &:focus {
+                        background: var(--white4);
+                    }
+                }
+                .contact-error {
+                    display: none;
+                    font-size: var(--medium);
+                    color: var(--main);
+                    margin-bottom: 2rem;
+                }
+                .privacy {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                    input {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        cursor: pointer;
+                        margin-bottom: 0;
+                        margin-right: 1.5rem;
+                        &:active {
+                            transform: scale(1.2);
+                        }
+                    }
+                    p {
+                        font-size: var(--medium);
+                    }
+                }
+            }
+        }
+    }
+    
+    .toggle-contact {
+        visibility: visible;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    @media screen and (max-width: 900px) {
+        .contact {
+            &__modules {
+                form {
+                    z-index: 1;
+                    width: 100%;
+                    max-width: 70rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .one-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        &__row {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .contact-button {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        color: white;
+        margin-top: 2rem;
+        background: var(--main);
+        cursor: pointer;
+        border: none;
+        transition: transform .2s ease, background .2s ease;
+        &:hover {
+            background: var(--main-hover);
+        }
+        &:active {
+            transform: scale(0.96);
+        }
+    }

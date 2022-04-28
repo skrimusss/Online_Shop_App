@@ -98,7 +98,7 @@
                 width: 35rem;
                 max-height: 40rem;
                 object-fit: cover;
-                transition: transform .2s ease;
+                transition: transform .2s ease-out;
                 overflow: hidden;
                 &:hover {
                     transform: scale(1.07);

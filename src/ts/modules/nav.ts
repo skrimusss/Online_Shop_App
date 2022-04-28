@@ -1,3 +1,5 @@
+import { toggleContact } from "./contact.js"
+
 const navOpenButtonElement: HTMLButtonElement = document.querySelector('.account-nav__menu-button')
 const navCloseButtonElement: HTMLButtonElement = document.querySelector('.hide-nav-button')
 let backgroundAreaElement: HTMLDivElement = document.querySelector('.background-click-area')
@@ -18,6 +20,8 @@ const favButtonElement: HTMLButtonElement = document.querySelector('.fav-popup__
 const cartPopupElement: HTMLDivElement = document.querySelector('.cart-popup')
 const cartLinkElement: HTMLParagraphElement = document.querySelector('.cart-link')
 const cartPopupButton: HTMLButtonElement = document.querySelector('.cart-popup__button')
+
+const contactButtons = Array.from(document.querySelectorAll('.contact-button'))
 
 const nav: HTMLElement = document.querySelector('.account-nav')
 let checkScroll: any
@@ -75,6 +79,18 @@ export const navLogic = () => {
                 })
             }
 
+            const contactButtonsLogic = () => {
+                contactButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        toggleContact()
+                        removeCartPopupProperties()
+                        removeFavPopupProperties()
+                        removeNavProperties()
+                        removeUserPopupProperties()
+                    })
+                })
+            }
+
             const accordions = () => {
                 accordionElements.forEach(accordion => {
                     class accordionModules {
@@ -116,6 +132,7 @@ export const navLogic = () => {
             navCloseButtonElement.addEventListener('click', navToggle)
             accordions()
             removeNavByLinks()
+            contactButtonsLogic()
         }
 
         const userNavLogic = () => {

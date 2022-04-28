@@ -1,0 +1,79 @@
+.footer {
+    position: relative;
+    left: 0;
+    padding: 4rem 0;
+    bottom: 0;
+    background-color: var(--white3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__modules {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &--contact {
+            .box {
+                display: flex;
+                &__main-icon {
+                    margin-right: 2rem;
+                    i {
+                        font-size: var(--biggest);
+                    }
+                }
+                &__main {
+                    &--text {
+                        margin-bottom: 2rem;
+                        p {
+                            font-size: var(--medium);
+                            margin-bottom: .5rem;
+                        }
+                        h3 {
+                            font-size: var(--large);
+                        }
+                        a {
+                            position: relative;
+                            font-size: var(--large);
+                            font-weight: var(--bold);
+                            text-decoration: none;
+                            color: var(--text-color);
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                bottom: -1rem;
+                                width: 0;
+                                height: 3px;
+                                transition: width .2s ease;
+                                background-color: var(--main);
+                            }
+                            &:hover::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &--bottom-text {
+            text-align: center;
+            margin-top: 5rem;
+            p {
+                font-size: var(--medium);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        &__modules {
+            justify-content: center;
+            &--contact {
+                .box {
+                    margin: 2rem;
+                }
+            }
+        }
+    }
+}

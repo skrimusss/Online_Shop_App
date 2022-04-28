@@ -1,0 +1,25 @@
+.scroll-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 4.5rem;
+    height: 4.5rem;
+    bottom: 3rem;
+    right: 2rem;
+    border-radius: 50%;
+    background-color: var(--white4);
+    cursor: pointer;
+    z-index: 2;
+    transform: scale(0);
+    visibility: hidden;
+    transition: transform .2s ease, visibility .2s ease;
+    p {
+        font-size: var(--big);
+    }
+}
+
+.toggle-scroll-button {
+    transform: scale(1);
+    visibility: visible;
+}
