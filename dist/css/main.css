@@ -357,19 +357,13 @@ body::-webkit-scrollbar {
   justify-content: center;
   width: 100%;
   height: 100vh; }
-  .header::after {
-    content: '';
+  .header__background {
     position: absolute;
+    line-height: 0;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url("/src/img/splashpaint.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-    z-index: -1;
-    filter: grayscale(0.4); }
+    pointer-events: none; }
   .header__modules--content {
     display: flex;
     flex-direction: column;
@@ -387,6 +381,20 @@ body::-webkit-scrollbar {
       font-weight: var(--bold); }
       .header__modules--content .subtitle span {
         color: var(--main); }
+    .header__modules--content button {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      font-size: var(--large);
+      background: var(--main);
+      border-radius: 1rem;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: transform .2s ease; }
+      .header__modules--content button:hover {
+        background: var(--main-hover); }
+      .header__modules--content button:active {
+        transform: scale(0.96); }
 
 .account-nav {
   position: fixed;
@@ -409,6 +417,9 @@ body::-webkit-scrollbar {
       display: flex;
       align-items: center;
       position: relative; }
+    .account-nav__modules .mobile-nav-logo {
+      width: 16rem;
+      transition: width .2s ease; }
     .account-nav__modules--link {
       display: flex;
       align-items: center;
@@ -444,6 +455,8 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 450px) {
   .account-nav__modules {
     justify-content: flex-end; }
+    .account-nav__modules .mobile-nav-logo {
+      width: 13rem; }
   .mobile-nav-logo {
     display: none; } }
 

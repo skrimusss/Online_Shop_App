@@ -1,4 +1,4 @@
-const texts: string[] = ['Best and newest shop with sneakers and clothes         ']
+const texts: string[] = ['Best and newest shop with sneakers and clothes            ', 'Save 20% off your first order            ']
 let count: number = 0
 let index: number = 0
 let currentText: string = ''
@@ -17,5 +17,5 @@ export const type = () => {
         index = 0
     }
 
-    setTimeout(type, 100)
+    setTimeout(type, 50)
 }

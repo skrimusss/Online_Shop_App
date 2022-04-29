@@ -1,4 +1,4 @@
-const texts = ['Best and newest shop with sneakers and clothes         '];
+const texts = ['Best and newest shop with sneakers and clothes            ', 'Save 20% off your first order            '];
 let count = 0;
 let index = 0;
 let currentText = '';
@@ -14,5 +14,5 @@ export const type = () => {
         count++;
         index = 0;
     }
-    setTimeout(type, 100);
+    setTimeout(type, 50);
 };

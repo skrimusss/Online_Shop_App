@@ -20,6 +20,10 @@
             align-items: center;
             position: relative;
         }
+        .mobile-nav-logo {
+            width: 16rem;
+            transition: width .2s ease;
+        }
         &--link {
             display: flex;
             align-items: center;
@@ -64,6 +68,9 @@
     .account-nav {
         &__modules {
             justify-content: flex-end;
+            .mobile-nav-logo {
+                width: 13rem;
+            }
         }
     }
     .mobile-nav-logo {

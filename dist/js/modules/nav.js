@@ -18,6 +18,7 @@ const cartPopupButton = document.querySelector('.cart-popup__button');
 const contactButtons = Array.from(document.querySelectorAll('.contact-button'));
 const nav = document.querySelector('.account-nav');
 let checkScroll;
+const logo = document.querySelector('.mobile-nav-logo');
 export const navLogic = () => {
     const navFunctions = () => {
         const removeNavProperties = () => {
@@ -222,9 +223,11 @@ export const navLogic = () => {
                     toggled = true;
                     if (curDirection === 2 && curScroll > threshold) {
                         nav.style.height = '6rem';
+                        logo.style.width = '13rem';
                     }
                     else if (curDirection === 1) {
                         nav.style.height = '8rem';
+                        logo.style.width = '16rem';
                     }
                     else {
                         toggled = false;

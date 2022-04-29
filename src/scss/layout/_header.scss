@@ -5,19 +5,13 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
-    &::after {
-        content: '';
+    &__background {
         position: absolute;
+        line-height: 0;
+        width: 100%;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100vh;
-        background-image: url('/src/img/splashpaint.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 50%;
-        z-index: -1;
-        filter: grayscale(0.4);
+        pointer-events: none;
     }
     &__modules {
         &--content {
@@ -38,6 +32,23 @@
                 font-weight: var(--bold);
                 span {
                     color: var(--main);
+                }
+            }
+            button {
+                margin-top: 3rem;
+                padding: 1rem 2rem;
+                font-size: var(--large);
+                background: var(--main);
+                border-radius: 1rem;
+                border: none;
+                color: white;
+                cursor: pointer;
+                transition: transform .2s ease;
+                &:hover {
+                    background: var(--main-hover);
+                }
+                &:active {
+                    transform: scale(0.96);
                 }
             }
         }
