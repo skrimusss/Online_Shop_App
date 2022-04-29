@@ -369,20 +369,24 @@ body::-webkit-scrollbar {
     background-position: center;
     background-size: 50%;
     z-index: -1;
-    filter: brightness(0.5); }
+    filter: grayscale(0.4); }
   .header__modules--content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center; }
-    .header__modules--content h1 {
-      font-size: var(--header);
+    .header__modules--content .typing-heading {
+      font-size: var(--big);
       color: white;
-      margin-bottom: 1rem; }
-    .header__modules--content h3 {
+      margin-bottom: 1rem;
+      font-weight: var(--bold); }
+    .header__modules--content .subtitle {
       font-size: var(--biggest);
       color: white;
-      margin-bottom: .1rem; }
+      margin-bottom: .1rem;
+      font-weight: var(--bold); }
+      .header__modules--content .subtitle span {
+        color: var(--main); }
 
 .account-nav {
   position: fixed;

@@ -17,7 +17,7 @@
         background-position: center;
         background-size: 50%;
         z-index: -1;
-        filter: brightness(0.5);
+        filter: grayscale(0.4);
     }
     &__modules {
         &--content {
@@ -25,15 +25,20 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            h1 {
-                font-size: var(--header);
+            .typing-heading {
+                font-size: var(--big);
                 color: white;
                 margin-bottom: 1rem;
+                font-weight: var(--bold);
             }
-            h3 {
+            .subtitle {
                 font-size: var(--biggest);
                 color: white;
                 margin-bottom: .1rem;
+                font-weight: var(--bold);
+                span {
+                    color: var(--main);
+                }
             }
         }
     }
