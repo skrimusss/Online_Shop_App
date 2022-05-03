@@ -1,0 +1,12 @@
+.sneakers-area {
+    &__modules {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
+        grid-auto-flow: dense;
+        gap: 2rem;
+        &--box {
+            width: auto;
+            height: auto;
+        }
+    }
+}

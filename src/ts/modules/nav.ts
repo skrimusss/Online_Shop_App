@@ -262,7 +262,7 @@ export const navLogic = () => {
                         logo.style.width = '13rem'
                     } else if (curDirection === 1) {
                         nav.style.height = '8rem'
-                        logo.style.width = '16rem'
+                        logo.style.width = '15rem'
                     } else {
                         toggled = false
                     }

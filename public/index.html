@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My clothes</title>
+    <title>My shop</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
 
 </head>
 
@@ -26,14 +26,12 @@
             </button>
 
             <div class="main-logo mobile-nav-logo">
-                <img src="src/img/logosvg.svg" alt="logo">
+                <img src="/src/img/logosvg.svg" alt="logo">
             </div>
 
             <div class="account-nav__modules--container">
                 <p class="account-nav__modules--link user-link">
-
                     <i class="uil uil-user"></i>
-
                     <div aria-expanded="false" class="login-popup">
                         <p class="login-popup__title">Hi, Matthew!</p>
                         <p class="login-popup__subtitle">How're you?</p>
@@ -45,6 +43,7 @@
                         </div>
                     </div>
                 </p>
+
                 <p class="account-nav__modules--link fav-link">
                     <i class="uil uil-heart"></i>
                     <div aria-expanded="false" class="fav-popup">
@@ -53,6 +52,7 @@
                         <button class="fav-popup__button">Add new products!</button>
                     </div>
                 </p>
+
                 <p class="account-nav__modules--link cart-link">
                     <i class="uil uil-shopping-cart-alt"></i>
                     <div aria-expanded="false" class="cart-popup">
@@ -65,6 +65,7 @@
                     <i class="uil uil-phone-alt"></i>
                 </p>
             </div>
+
         </div>
     </nav>
 
@@ -72,7 +73,7 @@
         <div class="nav__modules">
             <div class="nav__modules--header">
                 <div class="main-logo">
-                    <img src="src/img/logosvg.svg" alt="logo">
+                    <img src="/src/img/logosvg.svg" alt="logo">
                 </div>
                 <p class="hide-nav-button "><i class="uil uil-times"></i></p>
             </div>
@@ -145,7 +146,7 @@
 
     <header class="header">
         <div class="header__background">
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 167.86666666666667,171.60000000000002 335.73333333333335,143.20000000000002 494,160 C 652.2666666666667,176.79999999999998 800.9333333333334,238.8 957,253 C 1113.0666666666666,267.2 1276.5333333333333,233.6 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#0a0c11ff" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-91.70,107.08 C371.05,192.94 512.13,1.50 746.32,338.98 L508.17,241.30 L-29.06,213.66 Z" style="stroke: none; fill: #0e1018;"></path></svg>
         </div>
         <div class="header__modules wrapper horizontal-padding">
             <div class="header__modules--content">
@@ -153,7 +154,10 @@
                 <p class="subtitle">Best <span>Delivery</span></p>
                 <p class="subtitle">Best <span>Quality</span></p>
                 <p class="subtitle">Best <span>items</span></p>
-                <button>Shop now!</button>
+                <form action="/src/pages/sneakers.html">
+                    <button>Shop now!</button>
+                </form>
+
             </div>
         </div>
     </header>
@@ -173,8 +177,8 @@
                         <i class="uil uil-arrow-right"></i>
                 </button>
                 </div>
-                <div class="propose__modules">
-                    <div class="propose__modules--box">
+                <div class="propose__modules propose1">
+                    <!-- <div class="propose__modules--box">
                         <img src="https://img01.ztat.net/article/spp-media-p1/682270c4ced942bb9b32a5a8b6da9bb3/6a7ecdc874614b3b8a4fc235a47bc7ce.jpg?imwidth=300&filter=packshot" alt="vapormax">
                         <div class="content">
                             <p class="content__title">Nike sportswear</p>
@@ -276,13 +280,13 @@
                                 Add to cart</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
         <section class="advertisement">
             <div class="advertisement__top-wave">
-                <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(14, 16, 24, 1)" offset="0%"></stop><stop stop-color="rgba(14, 16, 24, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,60L40,64C80,68,160,76,240,80C320,84,400,84,480,74C560,64,640,44,720,32C800,20,880,16,960,30C1040,44,1120,76,1200,90C1280,104,1360,100,1440,90C1520,80,1600,64,1680,48C1760,32,1840,16,1920,12C2000,8,2080,16,2160,34C2240,52,2320,80,2400,84C2480,88,2560,68,2640,62C2720,56,2800,64,2880,74C2960,84,3040,96,3120,94C3200,92,3280,76,3360,58C3440,40,3520,20,3600,18C3680,16,3760,32,3840,42C3920,52,4000,56,4080,50C4160,44,4240,28,4320,30C4400,32,4480,52,4560,52C4640,52,4720,32,4800,32C4880,32,4960,52,5040,64C5120,76,5200,80,5280,74C5360,68,5440,52,5520,46C5600,40,5680,44,5720,46L5760,48L5760,120L5720,120C5680,120,5600,120,5520,120C5440,120,5360,120,5280,120C5200,120,5120,120,5040,120C4960,120,4880,120,4800,120C4720,120,4640,120,4560,120C4480,120,4400,120,4320,120C4240,120,4160,120,4080,120C4000,120,3920,120,3840,120C3760,120,3680,120,3600,120C3520,120,3440,120,3360,120C3280,120,3200,120,3120,120C3040,120,2960,120,2880,120C2800,120,2720,120,2640,120C2560,120,2480,120,2400,120C2320,120,2240,120,2160,120C2080,120,2000,120,1920,120C1840,120,1760,120,1680,120C1600,120,1520,120,1440,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z"></path></svg>
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-91.70,107.08 C371.05,192.94 512.13,1.50 746.32,338.98 L508.17,241.30 L-29.06,213.66 Z" style="stroke: none; fill: #0e1018;"></path></svg>
             </div>
 
             <div class="advertisement__modules wrapper horizontal-padding">
@@ -290,13 +294,15 @@
                 <p>For the best Clothes experience Ever.
                 </p>
                 <div class="buttons">
-                    <button>Shop now</button>
+                    <form action="/src/pages/sneakers.html">
+                        <button>Shop now!</button>
+                    </form>
                 </div>
 
             </div>
 
             <div class="advertisement__bottom-wave">
-                <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(14, 16, 24, 1)" offset="0%"></stop><stop stop-color="rgba(14, 16, 24, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,60L40,64C80,68,160,76,240,80C320,84,400,84,480,74C560,64,640,44,720,32C800,20,880,16,960,30C1040,44,1120,76,1200,90C1280,104,1360,100,1440,90C1520,80,1600,64,1680,48C1760,32,1840,16,1920,12C2000,8,2080,16,2160,34C2240,52,2320,80,2400,84C2480,88,2560,68,2640,62C2720,56,2800,64,2880,74C2960,84,3040,96,3120,94C3200,92,3280,76,3360,58C3440,40,3520,20,3600,18C3680,16,3760,32,3840,42C3920,52,4000,56,4080,50C4160,44,4240,28,4320,30C4400,32,4480,52,4560,52C4640,52,4720,32,4800,32C4880,32,4960,52,5040,64C5120,76,5200,80,5280,74C5360,68,5440,52,5520,46C5600,40,5680,44,5720,46L5760,48L5760,120L5720,120C5680,120,5600,120,5520,120C5440,120,5360,120,5280,120C5200,120,5120,120,5040,120C4960,120,4880,120,4800,120C4720,120,4640,120,4560,120C4480,120,4400,120,4320,120C4240,120,4160,120,4080,120C4000,120,3920,120,3840,120C3760,120,3680,120,3600,120C3520,120,3440,120,3360,120C3280,120,3200,120,3120,120C3040,120,2960,120,2880,120C2800,120,2720,120,2640,120C2560,120,2480,120,2400,120C2320,120,2240,120,2160,120C2080,120,2000,120,1920,120C1840,120,1760,120,1680,120C1600,120,1520,120,1440,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z"></path></svg>
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-91.70,107.08 C371.05,192.94 512.13,1.50 746.32,338.98 L508.17,241.30 L-29.06,213.66 Z" style="stroke: none; fill: #0e1018;"></path></svg>
             </div>
         </section>
         <section class="propose vertical-margin horizontal-padding wrapper">
@@ -416,6 +422,7 @@
                         <i class="uil uil-arrow-right"></i>
                 </button>
                 </div>
+
                 <div class="propose__modules">
                     <div class="propose__modules--box">
                         <img src="https://img01.ztat.net/article/spp-media-p1/b5aaf26bdeeb4f1689c3db5e203bcbf1/87f362a54f34416688fbb6f3eca0cdf2.jpg?imwidth=300&filter=packshot" alt="vapormax">
@@ -529,7 +536,7 @@
                     </form>
 
                     <div class="img">
-                        <img src="src/img/vapormaxnewsletter.png" alt="vapormax">
+                        <img src="/src/img/vapormaxnewsletter.png" alt="vapormax">
                     </div>
                 </div>
 
@@ -573,7 +580,7 @@
         <div class="footer__modules wrapper horizontal-padding">
             <div class="footer__modules--logo">
                 <div class="main-logo">
-                    <img src="src/img/logosvg.svg" alt="logo">
+                    <img src="/src/img/logosvg.svg" alt="logo">
                 </div>
 
                 <button class="contact-button">
@@ -662,7 +669,7 @@
             <p>My Shop by Mateusz Michalik | &copy; 2022</p>
         </div>
     </footer>
-    <script type="module" src="dist/js/app.js"></script>
+    <script type="module" src="/dist/js/app.js"></script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@
             position: relative;
         }
         .mobile-nav-logo {
-            width: 16rem;
+            width: 15rem;
             transition: width .2s ease;
         }
         &--link {
@@ -37,6 +37,9 @@
             cursor: pointer;
             &:hover {
                 background-color: var(--white3);
+            }
+            .nav-link-title {
+                color: red;
             }
         }
     }
@@ -64,13 +67,10 @@
     width: 12rem;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 630px) {
     .account-nav {
         &__modules {
             justify-content: flex-end;
-            .mobile-nav-logo {
-                width: 13rem;
-            }
         }
     }
     .mobile-nav-logo {
