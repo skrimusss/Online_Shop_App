@@ -1,22 +1,5 @@
-import { products } from './products.js';
-const recommendedSection1 = document.querySelector('.propose1');
-export const rendererLogic = () => {
-    const render = () => {
-        products.map(product => {
-            class productModules {
-                constructor() {
-                    this.id = product.id;
-                    this.price = product.price;
-                    this.description = product.description;
-                    this.category = product.category;
-                    this.brand = product.brand;
-                    this.images = product.images;
-                }
-            }
-            const module = new productModules;
-            const productsHtml = () => {
-                // sneakers
-                const product1 = `
+// sneakers
+const product1 = () => `
                         <div class="propose__modules--box" id="${module.id[0]}" data-category="${module.category[0]}">
                         <img src="${module.images[0]}" alt="vapormax">
 
@@ -30,7 +13,7 @@ export const rendererLogic = () => {
                         </div>
                         </div>
                     `;
-                const product2 = `
+const product2 = () => `
                         <div class="propose__modules--box" id="${module.id[1]}" data-category="${module.category[1]}">
                             <img src="${module.images[1]}" alt="vapormax">
 
@@ -44,7 +27,7 @@ export const rendererLogic = () => {
                                 </div>
                         </div>
                     `;
-                const product3 = `
+const product3 = () => `
                         <div class="propose__modules--box" id="${module.id[2]}" data-category="${module.category[2]}">
                             <img src="${module.images[2]}" alt="vapormax">
 
@@ -58,7 +41,7 @@ export const rendererLogic = () => {
                             </div>
                             </div>
                     `;
-                const product4 = `
+const product4 = () => `
                         <div class="propose__modules--box" id="${module.id[3]}" data-category="${module.category[3]}">
                         <img src="${module.images[3]}" alt="vapormax">
 
@@ -72,7 +55,7 @@ export const rendererLogic = () => {
                                 </div>
                                 </div>
                     `;
-                const product5 = `
+const product5 = () => `
                     <div class="propose__modules--box" id="${module.id[4]}" data-category="${module.category[4]}">
                             <img src="${module.images[4]}" alt="vapormax">
 
@@ -86,7 +69,7 @@ export const rendererLogic = () => {
                             </div>
                             </div>
                     `;
-                const product6 = `
+const product6 = () => `
                         <div class="propose__modules--box" id="${module.id[5]}" data-category="${module.category[5]}">
                             <img src="${module.images[5]}" alt="vapormax">
 
@@ -100,7 +83,7 @@ export const rendererLogic = () => {
                             </div>
                             </div>
                     `;
-                const product7 = `
+const product7 = () => `
                     <div class="propose__modules--box" id="${module.id[6]}" data-category="${module.category[6]}">
                             <img src="${module.images[6]}" alt="vapormax">
 
@@ -114,14 +97,4 @@ export const rendererLogic = () => {
                             </div>
                             </div>
                     `;
-                const sneakersArr = [product1, product2, product3, product4, product5, product6, product7];
-                sneakersArr.map(product => {
-                    // recommendedSection1.innerHTML = product
-                    console.log(product.innerHTML);
-                });
-            };
-            productsHtml();
-        });
-    };
-    render();
-};
+export {};
