@@ -89,13 +89,13 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
-            margin-right: 3rem;
-            min-width: 35rem;
             overflow: hidden;
             border-radius: 1rem;
+            transition: .2s ease;
             img {
+                display: block;
                 border-radius: 1rem 1rem 0 0;
-                width: 35rem;
+                width: 100%;
                 max-height: 40rem;
                 object-fit: cover;
                 transition: transform .2s ease-out;
@@ -121,6 +121,7 @@
                     display: flex;
                     align-items: center;
                     padding-top: 1rem;
+                    justify-content: space-between;
                     &--price {
                         font-size: var(--large);
                     }
@@ -129,7 +130,7 @@
                         padding: 1.2rem 2rem;
                         border-radius: 1rem;
                         border: none;
-                        margin-left: 12rem;
+                        // margin-left: 10rem;
                         cursor: pointer;
                         background: none;
                         font-size: var(--medium);
@@ -158,4 +159,9 @@
             }
         }
     }
+}
+
+.propose-box {
+    margin-right: 3rem;
+    min-width: 35rem;
 }

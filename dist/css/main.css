@@ -551,13 +551,13 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    margin-right: 3rem;
-    min-width: 35rem;
     overflow: hidden;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    transition: .2s ease; }
     .propose__modules--box img {
+      display: block;
       border-radius: 1rem 1rem 0 0;
-      width: 35rem;
+      width: 100%;
       max-height: 40rem;
       object-fit: cover;
       transition: transform .2s ease-out;
@@ -578,7 +578,8 @@ body::-webkit-scrollbar {
       .propose__modules--box .content__options {
         display: flex;
         align-items: center;
-        padding-top: 1rem; }
+        padding-top: 1rem;
+        justify-content: space-between; }
         .propose__modules--box .content__options--price {
           font-size: var(--large); }
         .propose__modules--box .content__options--add-cart {
@@ -586,7 +587,6 @@ body::-webkit-scrollbar {
           padding: 1.2rem 2rem;
           border-radius: 1rem;
           border: none;
-          margin-left: 12rem;
           cursor: pointer;
           background: none;
           font-size: var(--medium);
@@ -607,6 +607,10 @@ body::-webkit-scrollbar {
           .propose__modules--box .content__options--add-cart:hover {
             padding-left: 3rem;
             background: var(--card-white-gradient); }
+
+.propose-box {
+  margin-right: 3rem;
+  min-width: 35rem; }
 
 .advertisement {
   position: relative;
@@ -988,12 +992,26 @@ body::-webkit-scrollbar {
 
 .sneakers-area__modules {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem; }
-  .sneakers-area__modules--box {
-    width: auto;
-    height: auto; }
+
+@media screen and (max-width: 1300px) {
+  .sneakers-area__modules {
+    grid-column: 1;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; } }
+
+@media screen and (max-width: 800px) {
+  .sneakers-area__modules {
+    grid-column: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; } }
+
+@media screen and (max-width: 500px) {
+  .sneakers-area__modules {
+    grid-column: 1;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; } }
 
 * {
   box-sizing: border-box;

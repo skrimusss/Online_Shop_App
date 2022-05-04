@@ -1,12 +1,37 @@
 .sneakers-area {
     &__modules {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
-        grid-auto-flow: dense;
+        grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
-        &--box {
-            width: auto;
-            height: auto;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .sneakers-area {
+        &__modules {
+            grid-column: 1;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sneakers-area {
+        &__modules {
+            grid-column: 1;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sneakers-area {
+        &__modules {
+            grid-column: 1;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
         }
     }
 }
