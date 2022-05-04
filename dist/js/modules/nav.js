@@ -17,7 +17,6 @@ const cartLinkElement = document.querySelector('.cart-link');
 const cartPopupButton = document.querySelector('.cart-popup__button');
 const contactButtons = Array.from(document.querySelectorAll('.contact-button'));
 const nav = document.querySelector('.account-nav');
-let checkScroll;
 const logo = document.querySelector('.mobile-nav-logo');
 export const navLogic = () => {
     const navFunctions = () => {
@@ -200,15 +199,13 @@ export const navLogic = () => {
         };
         const navHeightFunction = () => {
             let doc = document.documentElement;
-            let curScroll;
             let prevScroll = window.scrollY || doc.scrollTop;
             let curDirection;
             let prevDirection = 0;
             let toggled;
             let threshold = 150;
-            let toggleNav;
-            checkScroll = () => {
-                curScroll = window.scrollY || doc.scrollTop;
+            const checkScroll = () => {
+                const curScroll = window.scrollY || doc.scrollTop;
                 if (curScroll > prevScroll) {
                     curDirection = 2;
                 }
@@ -219,7 +216,7 @@ export const navLogic = () => {
                 if (toggled) {
                     prevDirection = curDirection;
                 }
-                toggleNav = () => {
+                const toggleNav = () => {
                     toggled = true;
                     if (curDirection === 2 && curScroll > threshold) {
                         nav.style.height = '6rem';
@@ -236,13 +233,13 @@ export const navLogic = () => {
                 };
                 toggleNav();
             };
+            window.addEventListener('scroll', () => {
+                checkScroll();
+            });
         };
         chooseNavLogic();
         userNavLogic();
         navHeightFunction();
-        window.addEventListener('scroll', () => {
-            checkScroll();
-        });
     };
     navFunctions();
 };

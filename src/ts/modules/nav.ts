@@ -24,7 +24,6 @@ const cartPopupButton: HTMLButtonElement = document.querySelector('.cart-popup__
 const contactButtons = Array.from(document.querySelectorAll('.contact-button'))
 
 const nav: HTMLElement = document.querySelector('.account-nav')
-let checkScroll: any
 
 const logo: HTMLElement = document.querySelector('.mobile-nav-logo')
 
@@ -230,17 +229,14 @@ export const navLogic = () => {
 
         const navHeightFunction = () => {
             let doc: HTMLElement = document.documentElement
-            let curScroll: number
             let prevScroll: number = window.scrollY || doc.scrollTop
             let curDirection: number
             let prevDirection: number = 0
             let toggled: boolean
-
             let threshold: number = 150
-            let toggleNav: any
 
-            checkScroll = () => {
-                curScroll = window.scrollY || doc.scrollTop
+            const checkScroll = () => {
+                const curScroll = window.scrollY || doc.scrollTop
 
                 if (curScroll > prevScroll) {
                     curDirection = 2
@@ -254,7 +250,7 @@ export const navLogic = () => {
                     prevDirection = curDirection
                 }
 
-                toggleNav = () => {
+                const toggleNav = () => {
                     toggled = true
 
                     if (curDirection === 2 && curScroll > threshold) {
@@ -270,14 +266,14 @@ export const navLogic = () => {
                 }
                 toggleNav()
             }
+            window.addEventListener('scroll', () => {
+                checkScroll()
+            })
         }
 
         chooseNavLogic()
         userNavLogic()
         navHeightFunction()
-        window.addEventListener('scroll', () => {
-            checkScroll()
-        })
     }
     navFunctions()
 }

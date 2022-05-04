@@ -12,7 +12,7 @@ export const newsletterLogic = () => {
         const module = new newsletterModules;
         const name = module.nameInput.value;
         const email = module.emailInput.value;
-        if (name === '' || email === '' || !module.privacyInput.checked) {
+        if (!name || !email || !module.privacyInput.checked) {
             module.error.style.display = 'flex';
         }
         else {

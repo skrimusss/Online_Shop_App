@@ -8,7 +8,9 @@ import { rendererLogic } from "./modules/products/render-products.js";
 
 const mainFunctions = () => {
     navLogic()
-    rendererLogic()
+    rendererLogic('shoes')
+    rendererLogic('clothes')
+    rendererLogic('accesories')
     recommendedLogic()
     newsletterLogic()
     contactLogic()
