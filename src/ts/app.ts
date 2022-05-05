@@ -1,25 +1,12 @@
-import { navLogic } from "./modules/nav.js";
-import { recommendedLogic } from "./modules/recommended.js";
-import { newsletterLogic } from "./modules/newsletter.js";
-import { contactLogic } from "./modules/contact.js";
-import { scrollButtonFunctions } from "./modules/scroll.js";
-import { type } from "./modules/typewriter.js";
-import { rendererLogic, rendererAll } from "./modules/products/render-products.js";
+import { renderMainPage, renderAllPagesComponents, renderProductsPage } from "./main-controler.js";
 
 const mainFunctions = () => {
-    navLogic()
-    scrollButtonFunctions()
-    if (document.body.getAttribute('data-page') === 'main') {
-        rendererLogic('shoes')
-        rendererLogic('clothes')
-        rendererLogic('accesories')
-        recommendedLogic()
-        newsletterLogic()
-        type()
-        contactLogic()
-    } else if (document.body.getAttribute('data-page') === 'products') {
-        rendererAll()
+    renderAllPagesComponents()
+    if (document.body.dataset.page === 'main') {
+        renderMainPage()
+    } else if (document.body.dataset.page === 'products') {
+        renderProductsPage()
     }
 };
 
-document.addEventListener('DOMContentLoaded', mainFunctions)
+mainFunctions()
