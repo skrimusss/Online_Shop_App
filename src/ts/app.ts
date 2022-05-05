@@ -1,12 +1,12 @@
 import { renderMainPage, renderAllPagesComponents, renderProductsPage } from "./main-controler.js"
-import { Datasets, BodyData } from "./modules/types/enums.js"
+import { Datasets, bodyData } from "./modules/types/enums.js"
 
 const mainFunctions = () => {
     renderAllPagesComponents()
 
-    if (BodyData === Datasets.Main) {
+    if (bodyData === Datasets.Main) {
         renderMainPage()
-    } else if (BodyData === Datasets.Products) {
+    } else if (bodyData === Datasets.Products) {
         renderProductsPage()
     }
 }

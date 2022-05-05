@@ -3,4 +3,4 @@ export var Datasets;
     Datasets["Main"] = "main";
     Datasets["Products"] = "products";
 })(Datasets || (Datasets = {}));
-export const BodyData = document.body.dataset.page;
+export const bodyData = document.body.dataset.page;

@@ -3,4 +3,4 @@ export enum Datasets {
     Products = 'products'
 }
 
-export const BodyData: string = document.body.dataset.page
+export const bodyData = document.body.dataset.page
