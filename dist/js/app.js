@@ -1,10 +1,11 @@
 import { renderMainPage, renderAllPagesComponents, renderProductsPage } from "./main-controler.js";
+import { Datasets, BodyData } from "./modules/types/enums.js";
 const mainFunctions = () => {
     renderAllPagesComponents();
-    if (document.body.dataset.page === 'main') {
+    if (BodyData === Datasets.Main) {
         renderMainPage();
     }
-    else if (document.body.dataset.page === 'products') {
+    else if (BodyData === Datasets.Products) {
         renderProductsPage();
     }
 };
