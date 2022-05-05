@@ -3,21 +3,9 @@ const recommendedSections = Array.from(document.querySelectorAll('.propose__modu
 const mainAreaSection = document.querySelector('.sneakers-area__modules');
 export const rendererFilteredProducts = (filter) => {
     let filteredProducts = products.filter(product => product.filter === filter);
-    filteredProducts.forEach(product => {
+    filteredProducts.forEach((product) => {
         const box = document.createElement('div');
-        box.innerHTML = `
-                        <div class="propose__modules--box propose-box" id="${product.id}" data-category="${product.category}">
-                            <img src="${product.images}" alt="vapormax">
-                                <div class="content">
-                                    <p class="content__title">${product.brand}</p>
-                                    <p class="content__subtitle">${product.description}</p>
-                                    <div class="content__options">
-                                    <p class="content__options--price">${product.price}$</p>
-                                    <button class="content__options--add-cart"><i class="uil uil-shopping-cart-alt"></i> Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-        `;
+        box.innerHTML = buildProduct(product);
         if (filter === 'shoes') {
             recommendedSections[0].appendChild(box);
         }
@@ -30,21 +18,24 @@ export const rendererFilteredProducts = (filter) => {
     });
 };
 export const rendererAllProducts = () => {
-    products.forEach(product => {
+    products.forEach((product) => {
         const box = document.createElement('div');
-        box.innerHTML = `
-                        <div class="propose__modules--box" id="${product.id}" data-category="${product.category}">
-                            <img src="${product.images}" alt="vapormax">
-                                <div class="content">
-                                    <p class="content__title">${product.brand}</p>
-                                    <p class="content__subtitle">${product.description}</p>
-                                    <div class="content__options">
-                                    <p class="content__options--price">${product.price}$</p>
-                                    <button class="content__options--add-cart"><i class="uil uil-shopping-cart-alt"></i> Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-        `;
+        box.innerHTML = buildProduct(product);
         mainAreaSection.appendChild(box);
     });
+};
+const buildProduct = ({ id, category, description, images, price, brand }) => {
+    return `
+    <div class="propose__modules--box" id="${id}" data-category="${category}">
+        <img src="${images}" alt="vapormax">
+            <div class="content">
+                <p class="content__title">${brand}</p>
+                <p class="content__subtitle">${description}</p>
+                <div class="content__options">
+                <p class="content__options--price">${price}$</p>
+                <button class="content__options--add-cart"><i class="uil uil-shopping-cart-alt"></i> Add to cart</button>
+            </div>
+        </div>
+    </div>
+`;
 };

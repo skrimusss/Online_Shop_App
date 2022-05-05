@@ -608,9 +608,9 @@ body::-webkit-scrollbar {
             padding-left: 3rem;
             background: var(--card-white-gradient); }
 
-.propose-box {
-  margin-right: 3rem;
-  min-width: 35rem; }
+.propose__modules .propose__modules--box {
+  min-width: 35rem;
+  margin: 1rem; }
 
 .advertisement {
   position: relative;
@@ -1007,7 +1007,7 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .sneakers-area__modules {
     grid-column: 1;
     grid-template-columns: repeat(1, 1fr);
