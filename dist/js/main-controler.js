@@ -15,8 +15,8 @@ export const renderMainPage = () => {
     contactLogic();
 };
 export const renderProductsPage = () => {
-    console.log('cos tu kiedys bedzie');
     rendererAllProducts();
+    // selectFiltersLogic()
 };
 export const renderAllPagesComponents = () => {
     navLogic();
