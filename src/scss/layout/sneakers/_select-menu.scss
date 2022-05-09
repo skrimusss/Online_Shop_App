@@ -2,6 +2,7 @@
     &__products-container {
         display: flex;
         flex-direction: row;
+        padding-top: 2rem;
     }
     .select-options {
         position: sticky;
@@ -70,6 +71,9 @@
                         width: 1rem;
                     }
                     &__sort-button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
                         padding: 2rem;
                         border: none;
                         color: white;
@@ -79,6 +83,10 @@
                         background-color: var(--white3);
                         &:hover {
                             background-color: var(--white4);
+                        }
+                        i {
+                            font-size: var(--large);
+                            padding: 0;
                         }
                     }
                     .active-button {

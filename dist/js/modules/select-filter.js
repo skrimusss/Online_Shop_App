@@ -1,6 +1,6 @@
 const selectBoxes = Array.from(document.querySelectorAll('.select-options__modules--select-box'));
-const filterContent = Array.from(document.querySelectorAll('.select-options-content'));
 const buttons = Array.from(document.querySelectorAll('.select-options-content__sort-button'));
+const sortButtons = Array.from(document.querySelectorAll('.sorting-filters-buttons'));
 export const selectFiltersLogic = () => {
     const accordions = () => {
         selectBoxes.forEach(selectBox => {
@@ -38,9 +38,32 @@ export const selectFiltersLogic = () => {
         });
     };
     const toggleFilters = () => {
+        for (let i = 0; i < sortButtons.length; i++) {
+            sortButtons[i].addEventListener('click', () => {
+                sortButtons.forEach(button => {
+                    button.classList.remove('active-button');
+                    button.innerHTML = button.textContent;
+                });
+                if (sortButtons[i].classList.contains('active-button')) {
+                    sortButtons[i].classList.add('active-button');
+                    sortButtons[i].innerHTML = sortButtons[i].innerHTML + '<i class="uil uil-check"></i>';
+                }
+                else {
+                    sortButtons[i].classList.remove('active-button');
+                    sortButtons[i].innerHTML = sortButtons[i].textContent;
+                }
+            });
+        }
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener('click', () => {
-                buttons[i].classList.toggle('active-button');
+                if (!buttons[i].classList.contains('active-button')) {
+                    buttons[i].classList.add('active-button');
+                    buttons[i].innerHTML = buttons[i].innerHTML + '<i class="uil uil-check"></i>';
+                }
+                else {
+                    buttons[i].classList.remove('active-button');
+                    buttons[i].innerHTML = buttons[i].textContent;
+                }
             });
         }
     };
