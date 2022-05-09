@@ -18,8 +18,8 @@ export const renderMainPage = () => {
 }
 
 export const renderProductsPage = () => {
+    selectFiltersLogic()
     rendererAllProducts()
-    // selectFiltersLogic()
 }
 
 export const renderAllPagesComponents = () => {

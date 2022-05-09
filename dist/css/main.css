@@ -5,6 +5,7 @@
   --white2: #0e1018;
   --white3: #131620;
   --white4: #24293a;
+  --white5: #32364b;
   --white-opacity: #1c2133f8;
   --grey: rgb(179, 179, 179);
   --white-gradient: linear-gradient(90deg, #80dfec48 0%, #0e1018 27%);
@@ -996,8 +997,8 @@ body::-webkit-scrollbar {
 
 .sneakers-area__modules {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem; }
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem; }
 
 @media screen and (max-width: 1500px) {
   .sneakers-area__modules {
@@ -1011,24 +1012,25 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem; } }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 970px) {
   .sneakers-area__modules {
     grid-column: 1;
     grid-template-columns: repeat(1, 1fr); } }
 
 .main__products-container {
   display: flex;
-  flex-direction: row-reverse; }
+  flex-direction: row; }
 
 .main .select-options {
   position: sticky;
   background-color: none;
   top: 10rem;
   left: 0;
-  height: 100vh;
-  width: 100%;
+  height: 85vh;
   max-width: 40rem;
+  width: 100%;
   z-index: 4;
+  margin-right: 1rem;
   overflow-y: auto; }
   .main .select-options::-webkit-scrollbar-thumb {
     background-color: var(--white3);
@@ -1057,7 +1059,8 @@ body::-webkit-scrollbar {
         border: none;
         border-radius: 1rem; }
         .main .select-options__modules--select-box .select-options-header__button--arrow {
-          font-size: var(--big); }
+          font-size: var(--big);
+          transition: transform .2s ease; }
       .main .select-options__modules--select-box .select-options-content {
         width: 100%;
         z-index: 2;
@@ -1066,9 +1069,9 @@ body::-webkit-scrollbar {
         background: var(--white4);
         border-radius: 1rem;
         overflow: hidden;
-        overflow-y: auto;
         max-height: 30rem;
-        box-shadow: 1px 1px 10px var(--white2); }
+        box-shadow: 1px 1px 10px var(--white2);
+        transition: max-height .2s ease; }
         .main .select-options__modules--select-box .select-options-content::-webkit-scrollbar-thumb {
           background-color: var(--white3);
           border-radius: 20rem;
@@ -1081,9 +1084,15 @@ body::-webkit-scrollbar {
           border: none;
           color: white;
           cursor: pointer;
+          font-size: var(--medium);
+          font-weight: var(--medium);
           background-color: var(--white3); }
           .main .select-options__modules--select-box .select-options-content__sort-button:hover {
             background-color: var(--white4); }
+        .main .select-options__modules--select-box .select-options-content .active-button {
+          background-color: var(--white5); }
+      .main .select-options__modules--select-box .brand-content {
+        overflow-y: auto; }
 
 @media screen and (max-width: 900px) {
   .select-options__modules {
@@ -1094,18 +1103,14 @@ body::-webkit-scrollbar {
   .select-options {
     position: relative;
     height: auto;
-    overflow-y: none;
+    overflow-y: hidden;
     width: 100%; }
     .select-options__modules {
       grid-template-columns: repeat(1, 1fr);
       gap: 1rem; }
-  .sneakers-area__modules {
-    grid-column: 1;
-    grid-template-columns: repeat(2, 1fr); }
   .main__products-container {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center; } }
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); } }
 
 * {
   box-sizing: border-box;

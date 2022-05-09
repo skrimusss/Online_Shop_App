@@ -5,6 +5,7 @@ import { type } from "./modules/typewriter.js";
 import { rendererFilteredProducts, rendererAllProducts } from "./modules/render-products.js";
 import { navLogic } from "./modules/nav.js";
 import { scrollButtonFunctions } from "./modules/scroll.js";
+import { selectFiltersLogic } from "./modules/select-filter.js";
 export const renderMainPage = () => {
     rendererFilteredProducts('shoes');
     rendererFilteredProducts('clothes');
@@ -15,8 +16,8 @@ export const renderMainPage = () => {
     contactLogic();
 };
 export const renderProductsPage = () => {
+    selectFiltersLogic();
     rendererAllProducts();
-    // selectFiltersLogic()
 };
 export const renderAllPagesComponents = () => {
     navLogic();

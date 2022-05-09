@@ -1,8 +1,8 @@
 .sneakers-area {
     &__modules {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
     }
 }
 
@@ -26,7 +26,7 @@
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 970px) {
     .sneakers-area {
         &__modules {
             grid-column: 1;

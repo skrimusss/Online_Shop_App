@@ -1,17 +1,18 @@
 .main {
     &__products-container {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
     .select-options {
         position: sticky;
         background-color: none;
         top: 10rem;
         left: 0;
-        height: 100vh;
-        width: 100%;
+        height: 85vh;
         max-width: 40rem;
+        width: 100%;
         z-index: 4;
+        margin-right: 1rem;
         overflow-y: auto;
         &::-webkit-scrollbar-thumb {
             background-color: var(--white3);
@@ -44,6 +45,7 @@
                         border-radius: 1rem;
                         &--arrow {
                             font-size: var(--big);
+                            transition: transform .2s ease;
                         }
                     }
                 }
@@ -55,9 +57,9 @@
                     background: var(--white4);
                     border-radius: 1rem;
                     overflow: hidden;
-                    overflow-y: auto;
                     max-height: 30rem;
                     box-shadow: 1px 1px 10px var(--white2);
+                    transition: max-height .2s ease;
                     &::-webkit-scrollbar-thumb {
                         background-color: var(--white3);
                         border-radius: 20rem;
@@ -72,11 +74,19 @@
                         border: none;
                         color: white;
                         cursor: pointer;
+                        font-size: var(--medium);
+                        font-weight: var(--medium);
                         background-color: var(--white3);
                         &:hover {
                             background-color: var(--white4);
                         }
                     }
+                    .active-button {
+                        background-color: var(--white5);
+                    }
+                }
+                .brand-content {
+                    overflow-y: auto;
                 }
             }
         }
@@ -96,24 +106,17 @@
     .select-options {
         position: relative;
         height: auto;
-        overflow-y: none;
+        overflow-y: hidden;
         width: 100%;
         &__modules {
             grid-template-columns: repeat(1, 1fr);
             gap: 1rem;
         }
     }
-    .sneakers-area {
-        &__modules {
-            grid-column: 1;
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
     .main {
         &__products-container {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
