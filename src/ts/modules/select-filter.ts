@@ -1,3 +1,7 @@
+import { products } from "./constants/products"
+import { ProductInterface } from "./constants/products"
+import { Datasets } from './../../../dist/js/modules/types/enums';
+
 const selectBoxes = Array.from(document.querySelectorAll('.select-options__modules--select-box'))
 const buttons = Array.from(document.querySelectorAll('.select-options-content__sort-button'))
 const sortButtons = Array.from(document.querySelectorAll('.sorting-filters-buttons'))
@@ -17,7 +21,7 @@ export const selectFiltersLogic = () => {
 
                 const addProperties = () => {
                     dataSet = 'true'
-                    module.content.style.maxHeight = '30rem'
+                    module.content.style.maxHeight = '35rem'
                     module.arrow.style.transform = 'rotate(0)'
                 }
 
@@ -58,7 +62,6 @@ export const selectFiltersLogic = () => {
                     sortButtons[i].innerHTML = sortButtons[i].textContent
                 }
             })
-
         }
 
         for (let i = 0; i < buttons.length; i++) {
@@ -74,6 +77,28 @@ export const selectFiltersLogic = () => {
         }
     }
 
+    // const sorting = () => {
+    //     products.map(product => {
+    //         let filtered = products.filter(({brand}: ProductInterface) => {
+    //             product.brand === brand
+    //         })
+
+    //         filtered.forEach(() => {
+    //             let brandData = product.brand
+
+    //             buttons.forEach((button: HTMLButtonElement) => {
+    //                 button.addEventListener('click', () => {
+    //                     if (button[1].dataset.brand === 'Nike sportswear') {
+    //                         return product[1].style.visibility = 'hidden'
+    //                     }
+    //                 })
+
+    //             })
+    //         })
+    //     })
+    // }
+
+    // sorting()
     accordions()
     toggleFilters()
 }

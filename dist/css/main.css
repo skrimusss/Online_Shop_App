@@ -1052,7 +1052,6 @@ body::-webkit-scrollbar {
         justify-content: space-between;
         width: 100%;
         padding: 1.5rem 2rem;
-        margin-bottom: 1rem;
         cursor: pointer;
         font-size: var(--large);
         background: var(--white3);
@@ -1070,7 +1069,8 @@ body::-webkit-scrollbar {
         background: var(--white4);
         border-radius: 1rem;
         overflow: hidden;
-        max-height: 30rem;
+        overflow-y: auto;
+        max-height: 35rem;
         box-shadow: 1px 1px 10px var(--white2);
         transition: max-height .2s ease; }
         .main .select-options__modules--select-box .select-options-content::-webkit-scrollbar-thumb {
@@ -1090,14 +1090,17 @@ body::-webkit-scrollbar {
           cursor: pointer;
           font-size: var(--medium);
           font-weight: var(--medium);
-          background-color: var(--white3); }
+          background-color: var(--white3);
+          transition: padding .2s ease; }
           .main .select-options__modules--select-box .select-options-content__sort-button:hover {
             background-color: var(--white4); }
           .main .select-options__modules--select-box .select-options-content__sort-button i {
             font-size: var(--large);
             padding: 0; }
         .main .select-options__modules--select-box .select-options-content .active-button {
-          background-color: var(--white5); }
+          background-color: var(--white5);
+          padding-top: 3rem;
+          padding-bottom: 3rem; }
       .main .select-options__modules--select-box .brand-content {
         overflow-y: auto; }
 

@@ -29,7 +29,7 @@ export const rendererAllProducts = () => {
 
 const buildProduct = ({id, category, description, images, price, brand}: ProductInterface) =>  {
     return `
-    <div class="propose__modules--box" id="${id}" data-category="${category}">
+    <div class="propose__modules--box" id="${id}" data-brand="${brand}" data-category="${category}">
         <img src="${images}" alt="vapormax">
             <div class="content">
                 <p class="content__title">${brand}</p>

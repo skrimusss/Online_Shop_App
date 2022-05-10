@@ -15,7 +15,7 @@ export const selectFiltersLogic = () => {
             let dataSet = module.content.dataset.expanded;
             const addProperties = () => {
                 dataSet = 'true';
-                module.content.style.maxHeight = '30rem';
+                module.content.style.maxHeight = '35rem';
                 module.arrow.style.transform = 'rotate(0)';
             };
             const removeProperties = () => {
@@ -67,6 +67,24 @@ export const selectFiltersLogic = () => {
             });
         }
     };
+    // const sorting = () => {
+    //     products.map(product => {
+    //         let filtered = products.filter(({brand}: ProductInterface) => {
+    //             product.brand === brand
+    //         })
+    //         filtered.forEach(() => {
+    //             let brandData = product.brand
+    //             buttons.forEach((button: HTMLButtonElement) => {
+    //                 button.addEventListener('click', () => {
+    //                     if (button[1].dataset.brand === 'Nike sportswear') {
+    //                         return product[1].style.visibility = 'hidden'
+    //                     }
+    //                 })
+    //             })
+    //         })
+    //     })
+    // }
+    // sorting()
     accordions();
     toggleFilters();
 };
