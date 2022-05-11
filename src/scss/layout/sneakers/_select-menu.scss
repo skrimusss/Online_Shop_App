@@ -22,7 +22,7 @@
         }
         &::-webkit-scrollbar {
             background-color: var(--white);
-            width: 1rem;
+            width: .5rem;
         }
         &__modules {
             display: grid;
@@ -43,6 +43,7 @@
                         color: white;
                         border: none;
                         border-radius: 1rem;
+                        margin-bottom: .5rem;
                         &--arrow {
                             font-size: var(--big);
                             transition: transform .2s ease;
@@ -68,7 +69,7 @@
                     }
                     &::-webkit-scrollbar {
                         background-color: var(--white);
-                        width: 1rem;
+                        width: .5rem;
                     }
                     &__sort-button {
                         display: flex;
@@ -86,7 +87,7 @@
                             background-color: var(--white4);
                         }
                         i {
-                            font-size: var(--large);
+                            font-size: var(--big);
                             padding: 0;
                         }
                     }
@@ -100,6 +101,18 @@
                     overflow-y: auto;
                 }
             }
+        }
+    }
+}
+
+.checkedAnimation {
+    animation: checked .4s;
+    @keyframes checked {
+        from {
+            transform: scale(0) rotate(0);
+        }
+        to {
+            transform: scale(1) rotate(360deg);
         }
     }
 }

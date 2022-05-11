@@ -68,7 +68,7 @@ export const selectFiltersLogic = () => {
             buttons[i].addEventListener('click', () => {
                 if (!buttons[i].classList.contains('active-button')) {
                     buttons[i].classList.add('active-button')
-                    buttons[i].innerHTML = buttons[i].innerHTML + '<i class="uil uil-check"></i>'
+                    buttons[i].innerHTML = buttons[i].innerHTML + "<i class='bx bx-check checkedAnimation'></i>"
                 } else {
                     buttons[i].classList.remove('active-button')
                     buttons[i].innerHTML = buttons[i].textContent

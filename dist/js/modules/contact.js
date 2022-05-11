@@ -17,9 +17,6 @@ export const toggleContact = () => {
     }
 };
 export const contactLogic = () => {
-    contactNavLink.addEventListener('click', () => {
-        toggleContact();
-    });
     contactHideButton.addEventListener('click', () => {
         toggleContact();
     });

@@ -6,6 +6,8 @@ import { rendererFilteredProducts, rendererAllProducts } from "./modules/render-
 import { navLogic } from "./modules/nav.js";
 import { scrollButtonFunctions } from "./modules/scroll.js";
 import { selectFiltersLogic } from "./modules/select-filter.js";
+import { favButtonEffect  } from "./modules/favourite.js";
+import { loader } from "./modules/loader.js";
 
 export const renderMainPage = () => {
     rendererFilteredProducts('shoes')
@@ -18,11 +20,13 @@ export const renderMainPage = () => {
 }
 
 export const renderProductsPage = () => {
-    selectFiltersLogic()
     rendererAllProducts()
+    selectFiltersLogic()
 }
 
 export const renderAllPagesComponents = () => {
     navLogic()
     scrollButtonFunctions()
+    favButtonEffect()
+    loader()
 }

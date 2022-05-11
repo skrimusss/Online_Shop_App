@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My shop</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -15,14 +15,15 @@
 </head>
 
 <body data-page="main">
+    <div class="loader"></div>
     <div class="background-click-area"></div>
     <div class="scroll-top-button horizontal-padding wrapper">
-        <p><i class="uil uil-arrow-up"></i></p>
+        <p><i class='bx bx-up-arrow-alt'></i></p>
     </div>
     <nav class="account-nav">
         <div class="account-nav__modules wrapper horizontal-padding">
             <button class="account-nav__menu-button">
-                <i class="uil uil-bars"></i>
+                <i class='bx bx-menu' ></i>
             </button>
 
             <div class="main-logo mobile-nav-logo">
@@ -31,7 +32,9 @@
 
             <div class="account-nav__modules--container">
                 <p class="account-nav__modules--link user-link">
-                    <i class="uil uil-user"></i>
+                    <i class="user-icon">
+                        <i class='bx bx-user'></i>
+                    </i>
                     <div aria-expanded="false" class="login-popup">
                         <p class="login-popup__title">Hi, Matthew!</p>
                         <p class="login-popup__subtitle">How're you?</p>
@@ -45,7 +48,9 @@
                 </p>
 
                 <p class="account-nav__modules--link fav-link">
-                    <i class="uil uil-heart"></i>
+                    <i class="heart-icon">
+                        <i class='bx bx-heart'></i>
+                    </i>
                     <div aria-expanded="false" class="fav-popup">
                         <p class="fav-popup__icon"><i class="uil uil-confused"></i></p>
                         <p class="fav-popup__text">Favourite list is empty</p>
@@ -54,7 +59,9 @@
                 </p>
 
                 <p class="account-nav__modules--link cart-link">
-                    <i class="uil uil-shopping-cart-alt"></i>
+                    <i class="cart-icon">
+                        <i class='bx bx-cart'></i>
+                    </i>
                     <div aria-expanded="false" class="cart-popup">
                         <p class="cart-popup__icon"><i class="uil uil-shopping-cart-alt"></i></p>
                         <p class="cart-popup__text">Cart is empty</p>
@@ -72,12 +79,12 @@
                 <div class="main-logo">
                     <img src="src/img/logosvg.svg" alt="logo">
                 </div>
-                <p class="hide-nav-button "><i class="uil uil-times"></i></p>
+                <p class="hide-nav-button "><i class='bx bx-right-arrow-alt'></i></p>
             </div>
             <div class="accordion">
                 <button class="accordion__header">
                     <p class="accordion__header--title">Sneakers</p>
-                    <p class="accordion__header--arrow"><i class="uil uil-angle-down"></i></p>
+                    <p class="accordion__header--arrow"><i class='bx bx-chevron-down' ></i></p>
                 </button>
                 <div aria-expanded="true" class="accordion__content">
                     <a class="nav__modules--link">
@@ -97,7 +104,7 @@
             <div class="accordion">
                 <button class="accordion__header">
                     <p class="accordion__header--title">Clothes</p>
-                    <p class="accordion__header--arrow"><i class="uil uil-angle-down"></i></p>
+                    <p class="accordion__header--arrow"><i class='bx bx-chevron-down' ></i></p>
                 </button>
                 <div aria-expanded="true" class="accordion__content">
                     <a class="nav__modules--link">
@@ -117,7 +124,7 @@
             <div class="accordion">
                 <button class="accordion__header">
                     <p class="accordion__header--title">Accesories</p>
-                    <p class="accordion__header--arrow"><i class="uil uil-angle-down"></i></p>
+                    <p class="accordion__header--arrow"><i class='bx bx-chevron-down' ></i></p>
                 </button>
                 <div aria-expanded="true" class="accordion__content">
                     <a class="nav__modules--link">
@@ -168,10 +175,10 @@
             <div class="propose__arrows-box">
                 <div class="propose__arrows-box--buttons">
                     <button class="left-button">
-                        <i class="uil uil-arrow-left"></i>
+                        <i class='bx bx-left-arrow-alt' ></i>
                 </button>
                     <button class="right-button">
-                        <i class="uil uil-arrow-right"></i>
+                        <i class='bx bx-right-arrow-alt' ></i>
                 </button>
                 </div>
                 <div class="propose__modules propose1">
@@ -207,10 +214,10 @@
             <div class="propose__arrows-box">
                 <div class="propose__arrows-box--buttons">
                     <button class="left-button">
-                        <i class="uil uil-arrow-left"></i>
+                        <i class='bx bx-left-arrow-alt' ></i>
                 </button>
                     <button class="right-button">
-                        <i class="uil uil-arrow-right"></i>
+                        <i class='bx bx-right-arrow-alt' ></i>
                 </button>
                 </div>
                 <div class="propose__modules propose2">
@@ -225,10 +232,10 @@
             <div class="propose__arrows-box">
                 <div class="propose__arrows-box--buttons">
                     <button class="left-button">
-                        <i class="uil uil-arrow-left"></i>
+                        <i class='bx bx-left-arrow-alt' ></i>
                 </button>
                     <button class="right-button">
-                        <i class="uil uil-arrow-right"></i>
+                        <i class='bx bx-right-arrow-alt' ></i>
                 </button>
                 </div>
 

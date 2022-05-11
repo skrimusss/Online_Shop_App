@@ -27,19 +27,19 @@
         &--link {
             display: flex;
             align-items: center;
-            flex-direction: column;
             justify-content: center;
             width: 4rem;
             height: 4rem;
             border-radius: 50%;
-            font-size: var(--large);
             margin-left: 2rem;
             cursor: pointer;
             &:hover {
                 background-color: var(--white3);
             }
-            .nav-link-title {
-                color: red;
+            .user-icon,
+            .cart-icon,
+            .heart-icon {
+                font-size: var(--large);
             }
         }
     }

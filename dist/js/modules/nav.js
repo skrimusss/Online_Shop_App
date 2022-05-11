@@ -18,6 +18,9 @@ const cartPopupButton = document.querySelector('.cart-popup__button');
 const contactButtons = Array.from(document.querySelectorAll('.contact-button'));
 const nav = document.querySelector('.account-nav');
 const logo = document.querySelector('.mobile-nav-logo');
+const userIconElement = document.querySelector('.user-icon');
+const favIconElement = document.querySelector('.heart-icon');
+const cartIconElement = document.querySelector('.cart-icon');
 export const navLogic = () => {
     const navFunctions = () => {
         const removeNavProperties = () => {
@@ -29,16 +32,19 @@ export const navLogic = () => {
             loginPopupElement.classList.remove('toggle-popup');
             loginPopupElement.setAttribute('aria-expanded', 'false');
             backgroundAreaElement.style.display = 'none';
+            userIconElement.innerHTML = "<i class='bx bx-user'></i>";
         };
         const removeFavPopupProperties = () => {
             favPopupElement.classList.remove('toggle-popup');
             favPopupElement.setAttribute('aria-expanded', 'false');
             backgroundAreaElement.style.display = 'none';
+            favIconElement.innerHTML = "<i class='bx bx-heart'></i>";
         };
         const removeCartPopupProperties = () => {
             cartPopupElement.classList.remove('toggle-popup');
             cartPopupElement.setAttribute('aria-expanded', 'false');
             backgroundAreaElement.style.display = 'none';
+            cartIconElement.innerHTML = "<i class='bx bx-cart'></i>";
         };
         const addNavProperties = () => {
             navElement.classList.add('opened-nav');
@@ -122,11 +128,19 @@ export const navLogic = () => {
                 loginPopupElement.classList.add('toggle-popup');
                 loginPopupElement.setAttribute('aria-expanded', 'true');
                 backgroundAreaElement.style.display = 'flex';
+                userIconElement.innerHTML = "<i class='bx bxs-user'></i>";
             };
             const addFavPopupProperties = () => {
                 favPopupElement.classList.add('toggle-popup');
                 favPopupElement.setAttribute('aria-expanded', 'true');
                 backgroundAreaElement.style.display = 'flex';
+                favIconElement.innerHTML = "<i class='bx bxs-heart'></i>";
+            };
+            const addCartPopupProperties = () => {
+                cartPopupElement.classList.add('toggle-popup');
+                cartPopupElement.setAttribute('aria-expanded', 'true');
+                backgroundAreaElement.style.display = 'flex';
+                cartIconElement.innerHTML = "<i class='bx bxs-cart'></i>";
             };
             const toggleUserPopup = () => {
                 if (loginPopupElement.getAttribute('aria-expanded') === 'false') {
@@ -143,11 +157,6 @@ export const navLogic = () => {
                 else {
                     removeFavPopupProperties();
                 }
-            };
-            const addCartPopupProperties = () => {
-                cartPopupElement.classList.add('toggle-popup');
-                cartPopupElement.setAttribute('aria-expanded', 'true');
-                backgroundAreaElement.style.display = 'flex';
             };
             const toggleCartPopup = () => {
                 if (cartPopupElement.getAttribute('aria-expanded') === 'false') {

@@ -1,4 +1,5 @@
 import { products, ProductInterface } from './constants/products.js';
+import { favButtonEffect } from './favourite.js';
 const recommendedSections = Array.from(document.querySelectorAll('.propose__modules'))
 const mainAreaSection = document.querySelector('.sneakers-area__modules')
 
@@ -24,21 +25,28 @@ export const rendererAllProducts = () => {
         const box = document.createElement('div')
         box.innerHTML = buildProduct(product)
         mainAreaSection.appendChild(box)
+
     })
 }
 
 const buildProduct = ({id, category, description, images, price, brand}: ProductInterface) =>  {
     return `
-    <div class="propose__modules--box" id="${id}" data-brand="${brand}" data-category="${category}">
-        <img src="${images}" alt="vapormax">
-            <div class="content">
-                <p class="content__title">${brand}</p>
-                <p class="content__subtitle">${description}</p>
-                <div class="content__options">
-                <p class="content__options--price">${price}$</p>
-                <button class="content__options--add-cart"><i class="uil uil-shopping-cart-alt"></i> Add to cart</button>
+        <div class="propose__modules--box" id="${id}" data-brand="${brand}" data-category="${category}">
+            <div class="image-box">
+            <button class="image-box__button" data-selected="false">
+            <i class='bx bx-heart'></i>
+            </button>
+            <img src="${images}" alt="${description}">
+            </div>
+                <div class="content">
+                    <p class="content__title">${brand}</p>
+                    <p class="content__subtitle">${description}</p>
+                    <div class="content__options">
+                    <p class="content__options--price">${price}$</p>
+                    <button class="content__options--add-cart"><i class='bx bx-cart'></i> Add to cart</button>
+                </div>
             </div>
         </div>
-    </div>
-`
+    `
+
 }
