@@ -13,6 +13,10 @@ export const favButtonEffect = () => {
     const productArea = Array.from(document.querySelectorAll(Elements.product))
     const favElements: Element[] = []
 
+    const rednerProduct = () => {
+
+    }
+
     for (let i = 0; i < productArea.length; i++) {
         class productElements {
             favButton: HTMLButtonElement = productArea[i]

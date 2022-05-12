@@ -1,6 +1,6 @@
 :root {
-  --main: #68d8e7;
-  --main-hover: #7fdeeb;
+  --main: rgb(2, 247, 255);
+  --main-hover: rgb(82, 248, 253);
   --white: #0a0c11;
   --white2: #0e1018;
   --white3: #131620;
@@ -9,10 +9,10 @@
   --white-opacity: #1c2133f8;
   --grey: rgb(179, 179, 179);
   --grey2: rgb(212, 212, 212);
-  --red: rgb(117, 117, 117);
-  --red2: rgb(241, 0, 0);
-  --white-gradient: linear-gradient(90deg, #80dfec48 0%, #0e1018 27%);
-  --card-white-gradient: linear-gradient(90deg, #80dfec48 0%, #131620 27%);
+  --red: rgb(206, 0, 0);
+  --red2: rgb(255, 0, 0);
+  --white-gradient: linear-gradient(90deg, rgba(2, 247, 255, 0.212) 0%, #0e1018 27%);
+  --card-white-gradient: linear-gradient(90deg, rgba(2, 247, 255, 0.212) 0%, #131620 27%);
   --bold: 800;
   --normal: 600;
   --header: 3.5rem;
@@ -605,6 +605,8 @@ body::-webkit-scrollbar {
         z-index: 2;
         cursor: pointer;
         color: var(--red); }
+        .propose__modules--box .image-box__button i {
+          transition: color .4s ease; }
         .propose__modules--box .image-box__button:active {
           transform: scale(0.96); }
       .propose__modules--box .image-box img {
@@ -666,20 +668,19 @@ body::-webkit-scrollbar {
   margin: 1rem; }
 
 .toggle-fav-button {
-  animation: toggleFav 0.6s; }
+  animation: toggleFav 0.8s ease; }
 
 @keyframes toggleFav {
   0% {
     transform: scale(1) rotate();
     color: var(--red); }
   25% {
-    transform: scale(0.7);
-    color: var(--red2); }
+    transform: scale(0.7) rotate(30deg); }
   50% {
-    transform: scale(1.3) rotate(40deg); }
+    transform: scale(1.3) rotate(-30deg); }
   100% {
     transform: scale(1) rotate(0);
-    color: var(--red); } }
+    color: var(--red2); } }
 
 .advertisement {
   position: relative;
@@ -1086,6 +1087,19 @@ body::-webkit-scrollbar {
   flex-direction: row;
   padding-top: 2rem; }
 
+.main .products-area__heading {
+  margin: 13rem 0rem 1rem 2rem;
+  font-size: var(--biggest); }
+  .main .products-area__heading span {
+    color: var(--main); }
+
+.main .products-area h2 {
+  color: var(--grey);
+  margin: 0rem 0rem 3rem 2rem;
+  font-size: var(--large); }
+  .main .products-area h2 span {
+    color: var(--main); }
+
 .main .select-options {
   position: sticky;
   background-color: none;
@@ -1194,7 +1208,11 @@ body::-webkit-scrollbar {
       gap: 1rem; }
   .main__products-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); } }
+    grid-template-columns: repeat(1, 1fr); }
+  .main .products-area__heading {
+    text-align: center; }
+  .main .products-area h2 {
+    text-align: center; } }
 
 * {
   box-sizing: border-box;

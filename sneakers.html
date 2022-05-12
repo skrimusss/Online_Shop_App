@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 
 <body data-page="products">
@@ -27,7 +27,7 @@
 
             <div class="main-logo mobile-nav-logo">
                 <a href="/index.html">
-                    <img src="/src/img/logosvg.svg" alt="logo">
+                    <img src="./src/img/logosvg.svg" alt="logo">
                 </a>
             </div>
 
@@ -94,7 +94,7 @@
             <div class="nav__modules--header">
                 <div class="main-logo">
                     <a href="/index.html">
-                        <img src="/src/img/logosvg.svg" alt="logo">
+                        <img src="./src/img/logosvg.svg" alt="logo">
                     </a>
                 </div>
                 <p class="hide-nav-button "><i class='bx bx-right-arrow-alt'></i></p>
@@ -166,102 +166,106 @@
         </div>
     </nav>
     <main class="main">
-        <section class="main__products-container wrapper vertical-margin">
-            <section class="select-options">
-                <div class="select-options__modules horizontal-padding">
-                    <div class="select-options__modules--select-box">
-                        <div class="select-options-header">
-                            <button class="select-options-header__button">
+        <section class="products-area wrapper vertical-margin">
+            <h1 class="products-area__heading">
+                <strong>Your best streetwear <span>&</span> Luxury shop!</strong></h1>
+            <h2>Free delivery still available for <span>23 hours!</span></h2>
+            <div class="main__products-container">
+                <div class="select-options">
+                    <div class="select-options__modules horizontal-padding">
+                        <div class="select-options__modules--select-box">
+                            <div class="select-options-header">
+                                <button class="select-options-header__button">
                             Sorting
                             <p class="select-options-header__button--arrow"><i class='bx bx-chevron-down' ></i></p>
                         </button>
 
-                            <div data-expanded="true" class="select-options-content">
-                                <button class="select-options-content__sort-button sorting-filters-buttons active-button">Without sorting
+                                <div data-expanded="true" class="select-options-content">
+                                    <button class="select-options-content__sort-button sorting-filters-buttons active-button">Without sorting
 
                                     <i class='bx bx-check checkedAnimation'></i>
                                 </button>
-                                <button class="select-options-content__sort-button sorting-filters-buttons">Sort by A-Z</button>
-                                <button class="select-options-content__sort-button sorting-filters-buttons">Sort by Z-A</button>
-                                <button class="select-options-content__sort-button sorting-filters-buttons">Sort by high price</button>
-                                <button class="select-options-content__sort-button sorting-filters-buttons">Sort by low price</button>
+                                    <button class="select-options-content__sort-button sorting-filters-buttons">Sort by A-Z</button>
+                                    <button class="select-options-content__sort-button sorting-filters-buttons">Sort by Z-A</button>
+                                    <button class="select-options-content__sort-button sorting-filters-buttons">Sort by high price</button>
+                                    <button class="select-options-content__sort-button sorting-filters-buttons">Sort by low price</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="select-options__modules--select-box">
-                        <div class="select-options-header">
-                            <button class="select-options-header__button">
+                        <div class="select-options__modules--select-box">
+                            <div class="select-options-header">
+                                <button class="select-options-header__button">
                             Brand
                             <p class="select-options-header__button--arrow"><i class='bx bx-chevron-down' ></i></p>
                         </button>
 
-                            <div data-expanded="true" class="select-options-content brand-content">
-                                <button class="select-options-content__sort-button active-button">All
+                                <div data-expanded="true" class="select-options-content brand-content">
+                                    <button class="select-options-content__sort-button active-button">All
 
                                     <i class='bx bx-check checkedAnimation'></i>
                                 </button>
-                                <button data-brand="Nike sportswear" class="select-options-content__sort-button">Nike sportswear</button>
-                                <button class="select-options-content__sort-button">Boss</button>
-                                <button class="select-options-content__sort-button">Karl Lagerfeld</button>
-                                <button class="select-options-content__sort-button">Jordan</button>
-                                <button class="select-options-content__sort-button">Polo Ralph Lauren</button>
-                                <button class="select-options-content__sort-button">Lacoste</button>
-                                <button class="select-options-content__sort-button">Versace</button>
-                                <button class="select-options-content__sort-button">Hugo</button>
-                                <button class="select-options-content__sort-button">Emporio Armani</button>
-                                <button class="select-options-content__sort-button">Tommy Hilfiger</button>
-                                <button class="select-options-content__sort-button">Guess</button>
-                                <button class="select-options-content__sort-button">Puma</button>
+                                    <button data-brand="Nike sportswear" class="select-options-content__sort-button">Nike sportswear</button>
+                                    <button class="select-options-content__sort-button">Boss</button>
+                                    <button class="select-options-content__sort-button">Karl Lagerfeld</button>
+                                    <button class="select-options-content__sort-button">Jordan</button>
+                                    <button class="select-options-content__sort-button">Polo Ralph Lauren</button>
+                                    <button class="select-options-content__sort-button">Lacoste</button>
+                                    <button class="select-options-content__sort-button">Versace</button>
+                                    <button class="select-options-content__sort-button">Hugo</button>
+                                    <button class="select-options-content__sort-button">Emporio Armani</button>
+                                    <button class="select-options-content__sort-button">Tommy Hilfiger</button>
+                                    <button class="select-options-content__sort-button">Guess</button>
+                                    <button class="select-options-content__sort-button">Puma</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="select-options__modules--select-box">
-                        <div class="select-options-header">
-                            <button class="select-options-header__button">
+                        <div class="select-options__modules--select-box">
+                            <div class="select-options-header">
+                                <button class="select-options-header__button">
                                  Color
                                  <p class="select-options-header__button--arrow"><i class='bx bx-chevron-down' ></i></p>
                             </button>
 
-                            <div data-expanded="true" class="select-options-content">
-                                <button class="select-options-content__sort-button active-button">All
+                                <div data-expanded="true" class="select-options-content">
+                                    <button class="select-options-content__sort-button active-button">All
 
                                     <i class='bx bx-check checkedAnimation'></i>
                                 </button>
-                                <button class="select-options-content__sort-button">Black</button>
-                                <button class="select-options-content__sort-button">White</button>
-                                <button class="select-options-content__sort-button">Gold</button>
-                                <button class="select-options-content__sort-button">Green</button>
-                                <button class="select-options-content__sort-button">Blue</button>
+                                    <button class="select-options-content__sort-button">Black</button>
+                                    <button class="select-options-content__sort-button">White</button>
+                                    <button class="select-options-content__sort-button">Gold</button>
+                                    <button class="select-options-content__sort-button">Green</button>
+                                    <button class="select-options-content__sort-button">Blue</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="select-options__modules--select-box">
-                        <div class="select-options-header">
-                            <button class="select-options-header__button">
+                        <div class="select-options__modules--select-box">
+                            <div class="select-options-header">
+                                <button class="select-options-header__button">
                             Category
                             <p class="select-options-header__button--arrow"><i class='bx bx-chevron-down' ></i></p>
                         </button>
 
-                            <div data-expanded="true" class="select-options-content">
-                                <button class="select-options-content__sort-button active-button">All
+                                <div data-expanded="true" class="select-options-content">
+                                    <button class="select-options-content__sort-button active-button">All
 
                                     <i class='bx bx-check checkedAnimation'></i>
                                 </button>
-                                <button class="select-options-content__sort-button">Sneakers</button>
-                                <button class="select-options-content__sort-button">Clothes</button>
-                                <button class="select-options-content__sort-button">Accesories</button>
+                                    <button class="select-options-content__sort-button">Sneakers</button>
+                                    <button class="select-options-content__sort-button">Clothes</button>
+                                    <button class="select-options-content__sort-button">Accesories</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="sneakers-area wrapper horizontal-padding">
+                <div class="sneakers-area wrapper horizontal-padding">
 
-                <div class="sneakers-area__modules">
+                    <div class="sneakers-area__modules">
 
+                    </div>
                 </div>
-            </section>
-
+            </div>
         </section>
         <section aria-expanded="false" class="contact">
             <div class="contact__modules wrapper horizontal-padding vertical-margin">
@@ -301,7 +305,7 @@
             <div class="footer__modules--logo">
                 <div class="main-logo">
                     <a href="/index.html">
-                        <img src="/src/img/logosvg.svg" alt="logo">
+                        <img src="./src/img/logosvg.svg" alt="logo">
                     </a>
                 </div>
 
@@ -388,7 +392,7 @@
             <p>My Shop by Mateusz Michalik | &copy; 2022</p>
         </div>
     </footer>
-    <script type="module" src="/dist/js/app.js"></script>
+    <script type="module" src="./dist/js/app.js"></script>
 </body>
 
 </html>

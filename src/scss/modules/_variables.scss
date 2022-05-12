@@ -1,7 +1,7 @@
 :root {
     // colors
-    --main: #68d8e7;
-    --main-hover: #7fdeeb;
+    --main: rgb(2, 247, 255);
+    --main-hover: rgb(82, 248, 253);
     // white colors
     --white: #0a0c11;
     --white2: #0e1018;
@@ -11,10 +11,10 @@
     --white-opacity: #1c2133f8;
     --grey: rgb(179, 179, 179);
     --grey2: rgb(212, 212, 212);
-    --red: rgb(117, 117, 117);
-    --red2: rgb(241, 0, 0);
-    --white-gradient: linear-gradient(90deg, #80dfec48 0%, #0e1018 27%);
-    --card-white-gradient: linear-gradient(90deg, #80dfec48 0%, #131620 27%);
+    --red: rgb(206, 0, 0);
+    --red2: rgb(255, 0, 0);
+    --white-gradient: linear-gradient(90deg, rgba(2, 247, 255, 0.212) 0%, #0e1018 27%);
+    --card-white-gradient: linear-gradient(90deg, rgba(2, 247, 255, 0.212) 0%, #131620 27%);
     // font weight
     --bold: 800;
     --normal: 600;

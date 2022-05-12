@@ -9,6 +9,8 @@ var Elements;
 export const favButtonEffect = () => {
     const productArea = Array.from(document.querySelectorAll(Elements.product));
     const favElements = [];
+    const rednerProduct = () => {
+    };
     for (let i = 0; i < productArea.length; i++) {
         class productElements {
             constructor() {
