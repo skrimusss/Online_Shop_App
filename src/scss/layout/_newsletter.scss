@@ -13,24 +13,16 @@
         }
     }
     &__content {
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
         .img {
-            position: absolute;
             right: 0;
             padding-right: 3rem;
             img {
                 transform: rotate(-15deg);
-                transition: transform .2s ease;
-                width: 75rem;
+                width: 65rem;
                 z-index: -1;
-                padding-bottom: 5rem;
-                &:hover {
-                    transform: rotate(-20deg);
-                }
             }
         }
     }
@@ -106,7 +98,7 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
     .newsletter {
         &__title {
             text-align: center;

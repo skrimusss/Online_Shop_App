@@ -9,14 +9,12 @@
     justify-content: center;
     flex-direction: column;
     &__modules {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         &--contact {
             .box {
                 display: flex;
                 &__main-icon {
-                    margin-right: 2rem;
                     i {
                         font-size: var(--biggest);
                     }
@@ -68,7 +66,7 @@
 @media screen and (max-width: 768px) {
     .footer {
         &__modules {
-            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
             &--contact {
                 .box {
                     margin: 2rem;

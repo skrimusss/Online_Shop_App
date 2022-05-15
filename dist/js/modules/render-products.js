@@ -24,6 +24,18 @@ export const rendererAllProducts = () => {
         mainAreaSection.appendChild(box);
     });
 };
+const renderFavProducts = (itemID) => {
+    const favArea = document.querySelector('.fav-popup');
+    const favProducts = [];
+    const clickedProduct = products.find(product => product.id === itemID);
+    favProducts.push(clickedProduct);
+    products.forEach((product) => {
+        const box = document.createElement('div');
+        box.innerHTML = buildFavProduct(product);
+        favArea.appendChild(box);
+        console.log('trybi');
+    });
+};
 const buildProduct = ({ id, category, description, images, price, brand }) => {
     return `
         <div class="propose__modules--box" id="${id}" data-brand="${brand}" data-category="${category}">
@@ -43,4 +55,26 @@ const buildProduct = ({ id, category, description, images, price, brand }) => {
             </div>
         </div>
     `;
+};
+const buildFavProduct = ({ id, category, description, images, price, brand }) => {
+    return `
+    <div>
+    <p>
+    kurwo
+    </p>
+    </div>
+    `;
+};
+const buttons = Array.from(document.querySelectorAll('.image-box__button'));
+export const kurwo = () => {
+    buttons.forEach(button => {
+        const chuj = (itemID) => {
+            button.addEventListener('click', () => {
+                renderFavProducts(itemID);
+                console.log('chuj');
+            });
+        };
+        chuj();
+    });
+    console.log(buttons);
 };

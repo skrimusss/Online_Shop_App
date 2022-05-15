@@ -6,11 +6,8 @@ var Elements;
     Elements["favButton"] = ".image-box__button";
     Elements["product"] = ".propose__modules--box";
 })(Elements || (Elements = {}));
-export const favButtonEffect = () => {
+export const favButtonEffect = (itemID) => {
     const productArea = Array.from(document.querySelectorAll(Elements.product));
-    const favElements = [];
-    const rednerProduct = () => {
-    };
     for (let i = 0; i < productArea.length; i++) {
         class productElements {
             constructor() {
@@ -19,15 +16,14 @@ export const favButtonEffect = () => {
             }
         }
         const module = new productElements;
-        let dataSelect = module.favButton.dataset.selected;
         module.favButton.addEventListener('click', () => {
-            if (dataSelect === 'true') {
-                dataSelect = 'false';
+            if (module.favButton.dataset.selected === 'true') {
+                module.favButton.dataset.selected = 'false';
                 module.favButton.innerHTML = Elements.heart;
                 module.favButton.classList.remove(Elements.toggleButton);
             }
             else {
-                dataSelect = 'true';
+                module.favButton.dataset.selected = 'true';
                 module.favButton.innerHTML = Elements.solidHeart;
                 module.favButton.classList.add(Elements.toggleButton);
             }

@@ -1,23 +1,22 @@
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 2137;
-    background-color: #0e111e;
-    background-image: url('https://cdn.dribbble.com/users/563824/screenshots/4155980/untitled-11.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30%;
-    visibility: visible;
-    transition: visibility .2s ease, opacity .2s ease;
-    opacity: 1;
-    overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-    .loader {
-        background-size: 60%;
-    }
-}
+// .loader {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: 2137;
+//     background-color: #0e111e;
+//     background-image: url('https://cdn.dribbble.com/users/563824/screenshots/4155980/untitled-11.gif');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: 30%;
+//     visibility: visible;
+//     transition: visibility .2s ease, opacity .2s ease;
+//     opacity: 1;
+//     overflow: hidden;
+// }
+// @media screen and (max-width: 768px) {
+//     .loader {
+//         background-size: 60%;
+//     }
+// }

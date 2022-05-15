@@ -5,19 +5,52 @@
         padding-top: 2rem;
     }
     .products-area {
-        &__heading {
-            margin: 13rem 0rem 1rem 2rem;
-            font-size: var(--biggest);
-            span {
-                color: var(--main);
+        &__header {
+            margin: 13rem 0rem 4rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &--heading-box {
+                margin-right: 2rem;
+                h1 {
+                    margin-top: 1rem;
+                    font-size: var(--biggest);
+                    span {
+                        color: var(--main);
+                    }
+                }
+                h2 {
+                    color: var(--grey);
+                    margin: 1rem 0;
+                    font-size: var(--large);
+                    text-align: right;
+                    span {
+                        color: var(--main);
+                    }
+                }
             }
-        }
-        h2 {
-            color: var(--grey);
-            margin: 0rem 0rem 3rem 2rem;
-            font-size: var(--large);
-            span {
-                color: var(--main);
+            &--back-link {
+                font-size: var(--large);
+                color: var(--text-color);
+                text-decoration: none;
+                transition: background-color .2s ease, filter .2s ease;
+                padding: 1rem 1.5rem;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                &:active {
+                    filter: brightness(1.3);
+                }
+                &:hover i {
+                    transform: translateX(-.5rem);
+                }
+                &:hover {
+                    background-color: var(--white4);
+                }
+                i {
+                    transition: transform .2s ease;
+                    padding-right: 1rem;
+                }
             }
         }
     }
@@ -61,6 +94,13 @@
                         border: none;
                         border-radius: 1rem;
                         margin-bottom: .5rem;
+                        transition: filter .1s ease, background .2s ease;
+                        &:active {
+                            filter: brightness(1.3);
+                        }
+                        &:hover {
+                            background: var(--white4);
+                        }
                         &--arrow {
                             font-size: var(--big);
                             transition: transform .2s ease;
@@ -99,7 +139,10 @@
                         font-size: var(--medium);
                         font-weight: var(--medium);
                         background-color: var(--white3);
-                        transition: padding .2s ease;
+                        transition: padding .2s ease, filter .2s ease, background .2s ease;
+                        &:active {
+                            filter: brightness(1.3);
+                        }
                         &:hover {
                             background-color: var(--white4);
                         }
@@ -139,6 +182,41 @@
         &__modules {
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
+        }
+    }
+    .products-area {
+        &__header {
+            margin: 13rem 0rem 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            &--heading-box {
+                h1 {
+                    margin-top: 1rem;
+                    font-size: var(--biggest);
+                    span {
+                        color: var(--main);
+                    }
+                }
+                h2 {
+                    color: var(--grey);
+                    margin: 1rem 0;
+                    font-size: var(--large);
+                    span {
+                        color: var(--main);
+                    }
+                }
+            }
+            &--back-link {
+                font-size: var(--large);
+                color: var(--text-color);
+                text-decoration: none;
+                &:hover i {
+                    transform: translateX(-.5rem);
+                }
+                i {
+                    transition: transform .2s ease;
+                }
+            }
         }
     }
 }

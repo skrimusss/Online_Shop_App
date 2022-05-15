@@ -73,11 +73,14 @@
     .toggle-buttons-animation {
         animation: transform .5s;
         @keyframes transform {
-            from {
-                transform: rotate(0);
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(.7rem);
             }
             to {
-                transform: rotate(360deg);
+                transform: translateX(0);
             }
         }
     }
@@ -108,18 +111,25 @@
                 &__button {
                     position: absolute;
                     right: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
                     top: 2rem;
                     background: none;
                     font-size: var(--big);
                     border: none;
                     z-index: 2;
                     cursor: pointer;
-                    color: var(--red);
+                    color: var(--red2);
+                    transition: background .2s ease;
                     i {
                         transition: color .4s ease;
                     }
-                    &:active {
-                        transform: scale(0.96);
+                    &:hover {
+                        background: var(--grey2);
                     }
                 }
                 img {
@@ -201,17 +211,18 @@
     @keyframes toggleFav {
         0% {
             transform: scale(1) rotate();
-            color: var(--red);
+            background: none;
         }
         25% {
             transform: scale(0.7) rotate(30deg);
+            background: none;
         }
         50% {
             transform: scale(1.3) rotate(-30deg);
+            background: none;
         }
         100% {
             transform: scale(1) rotate(0);
-            color: var(--red2);
         }
     }
 }
