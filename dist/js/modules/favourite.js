@@ -1,3 +1,5 @@
+import { getLS, saveInLS } from './storage/storage-utils.js';
+const FAVS_LS = 'favs';
 var Elements;
 (function (Elements) {
     Elements["heart"] = "<i class='bx bx-heart'></i>";
@@ -11,22 +13,42 @@ export const favButtonEffect = (itemID) => {
     for (let i = 0; i < productArea.length; i++) {
         class productElements {
             constructor() {
-                this.favButton = productArea[i]
-                    .querySelector(Elements.favButton);
+                this.favButton = productArea[i].querySelector(Elements.favButton);
             }
         }
-        const module = new productElements;
+        const module = new productElements();
         module.favButton.addEventListener('click', () => {
             if (module.favButton.dataset.selected === 'true') {
-                module.favButton.dataset.selected = 'false';
-                module.favButton.innerHTML = Elements.heart;
-                module.favButton.classList.remove(Elements.toggleButton);
+                removeFromFav(module.favButton);
             }
             else {
-                module.favButton.dataset.selected = 'true';
-                module.favButton.innerHTML = Elements.solidHeart;
-                module.favButton.classList.add(Elements.toggleButton);
+                addToFav(module.favButton);
             }
         });
     }
 };
+function removeFromFav(node) {
+    node.dataset.selected = 'false';
+    node.innerHTML = Elements.heart;
+    node.classList.remove(Elements.toggleButton);
+    removeFromLS(getItemName(node));
+}
+function addToFav(node) {
+    node.dataset.selected = 'true';
+    node.innerHTML = Elements.solidHeart;
+    node.classList.add(Elements.toggleButton);
+    addToLS(getItemName(node));
+}
+function getItemName(node) {
+    return node.closest('.propose__modules--box').querySelector('.content__subtitle').innerHTML;
+}
+function removeFromLS(name) {
+    const storage = getLS(FAVS_LS);
+    storage.splice(name.indexOf(name));
+    saveInLS(FAVS_LS, storage);
+}
+function addToLS(name) {
+    const storage = getLS(FAVS_LS);
+    storage.push(name);
+    saveInLS(FAVS_LS, storage);
+}
