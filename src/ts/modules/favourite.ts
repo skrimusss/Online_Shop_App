@@ -1,5 +1,3 @@
-import { products } from "./constants/products"
-import { ProductInterface } from "./constants/products"
 import { getLS, saveInLS } from "./storage/storage-utils"
 import { Elements } from "./constants/ProductElements"
 
@@ -48,6 +46,7 @@ const removeFromLS = (name: string) => {
 	storage.splice(name.indexOf(name));
 	saveInLS(FAVS_LS, storage);
 }
+
 const addToLS = (name: string) => {
 	const storage = getLS(FAVS_LS);
 	storage.push(name);

@@ -1,8 +1,8 @@
 import { products, ProductInterface } from './constants/products.js';
-const recommendedSections = Array.from(document.querySelectorAll('.propose__modules'))
-const mainAreaSection = document.querySelector('.sneakers-area__modules')
+
 
 export const rendererFilteredProducts = (filter: string) => {
+    const recommendedSections = Array.from(document.querySelectorAll('.propose__modules'))
     let filteredProducts = products.filter(product => product.filter === filter)
 
     filteredProducts.forEach((product) => {
@@ -20,25 +20,12 @@ export const rendererFilteredProducts = (filter: string) => {
 }
 
 export const rendererAllProducts = () => {
+    const mainAreaSection = document.querySelector('.sneakers-area__modules')
+
     products.forEach((product: ProductInterface) => {
         const box = document.createElement('div')
         box.innerHTML = buildProduct(product)
         mainAreaSection.appendChild(box)
-    })
-}
-
-const renderFavProducts = (itemID: number) => {
-    const favArea = document.querySelector('.fav-popup')
-
-    const favProducts: ProductInterface[] = []
-    const clickedProduct = products.find(product => product.id === itemID)
-    favProducts.push(clickedProduct)
-
-    products.forEach((product: ProductInterface) => {
-        const box = document.createElement('div')
-        box.innerHTML = buildFavProduct(product)
-        favArea.appendChild(box)
-        console.log('trybi')
     })
 }
 
@@ -61,29 +48,4 @@ const buildProduct = ({id, category, description, images, price, brand}: Product
             </div>
         </div>
     `
-}
-
-const buildFavProduct = ({id, category, description, images, price, brand}: ProductInterface) =>  {
-    return `
-    <div>
-    <p>
-    kurwo
-    </p>
-    </div>
-    `
-}
-
-const buttons = Array.from(document.querySelectorAll('.image-box__button'))
-
-export const kurwo = () => {
-    buttons.forEach(button => {
-        const chuj = (itemID?: number) => {
-            button.addEventListener('click', () => {
-                renderFavProducts(itemID)
-                console.log('chuj')
-            })
-        }
-        chuj()
-    })
-    console.log(buttons)
 }

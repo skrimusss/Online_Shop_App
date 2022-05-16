@@ -8,13 +8,11 @@ import { scrollButtonFunctions } from "./modules/scroll.js";
 import { selectFiltersLogic } from "./modules/select-filter.js";
 import { loader } from "./modules/loader.js";
 import { favButtonEffect } from "./modules/favourite.js";
-import { kurwo } from "./modules/render-products.js";
 export const renderAllPagesComponents = () => {
-    kurwo();
-    favButtonEffect();
     navLogic();
     scrollButtonFunctions();
     loader();
+    favButtonEffect();
 };
 export const renderMainPage = () => {
     rendererFilteredProducts('shoes');
@@ -26,6 +24,6 @@ export const renderMainPage = () => {
     contactLogic();
 };
 export const renderProductsPage = () => {
-    rendererAllProducts();
     selectFiltersLogic();
+    rendererAllProducts();
 };

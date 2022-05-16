@@ -7,15 +7,13 @@ import { navLogic } from "./modules/nav.js";
 import { scrollButtonFunctions } from "./modules/scroll.js";
 import { selectFiltersLogic } from "./modules/select-filter.js";
 import { loader } from "./modules/loader.js";
-import { favButtonEffect  } from "./modules/favourite.js";
-import { kurwo } from "./modules/render-products.js";
+import { favButtonEffect } from "./modules/favourite.js";
 
 export const renderAllPagesComponents = () => {
-    kurwo()
-    favButtonEffect()
     navLogic()
     scrollButtonFunctions()
     loader()
+    favButtonEffect()
 }
 
 export const renderMainPage = () => {
@@ -29,6 +27,6 @@ export const renderMainPage = () => {
 }
 
 export const renderProductsPage = () => {
-    rendererAllProducts()
     selectFiltersLogic()
+    rendererAllProducts()
 }
