@@ -1,6 +1,5 @@
 import { products, ProductInterface } from './constants/products.js';
 
-
 export const rendererFilteredProducts = (filter: string) => {
     const recommendedSections = Array.from(document.querySelectorAll('.propose__modules'))
     let filteredProducts = products.filter(product => product.filter === filter)
