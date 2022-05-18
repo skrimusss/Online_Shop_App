@@ -1,5 +1,5 @@
-import { getLS, saveInLS } from "./storage/storage-utils"
-import { Elements } from "./constants/ProductElements"
+import { getLS, saveInLS } from "./storage/storage-utils.js"
+import { Elements } from "./constants/ProductElements.js"
 
 const FAVS_LS = 'favs'
 
