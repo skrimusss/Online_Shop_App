@@ -109,10 +109,8 @@ body::-webkit-scrollbar {
         background: var(--white-gradient); }
 
 .fav-popup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -120,13 +118,21 @@ body::-webkit-scrollbar {
   transform: translateY(0);
   top: 6rem;
   right: 0;
+  max-height: 40rem;
   padding: 2rem;
+  min-width: 25rem;
   border-radius: 1rem;
   background-color: var(--white2);
-  width: 25rem;
   box-shadow: var(--box-shadow);
   transition: visibility .2s ease, opacity .2s ease, transform .2s ease;
   z-index: 199; }
+  .fav-popup::-webkit-scrollbar-thumb {
+    background-color: var(--white3);
+    border-radius: 20rem;
+    border: 1px solid var(--white4); }
+  .fav-popup::-webkit-scrollbar {
+    background-color: var(--white);
+    width: 1rem; }
   .fav-popup__icon {
     font-size: var(--big); }
   .fav-popup__text {
@@ -379,7 +385,8 @@ body::-webkit-scrollbar {
     background-size: cover;
     width: 100%;
     height: 100vh;
-    filter: grayscale(0.8) brightness(0.7); }
+    filter: grayscale(0.8) brightness(0.7);
+    z-index: -1; }
   .header__background {
     position: absolute;
     line-height: 0;
@@ -434,8 +441,8 @@ body::-webkit-scrollbar {
   z-index: 199; }
   .account-nav__modules {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
     .account-nav__modules--container {
       display: flex;
       align-items: center;
@@ -444,6 +451,7 @@ body::-webkit-scrollbar {
       width: 15rem;
       transition: width .2s ease; }
     .account-nav__modules--link {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -454,6 +462,18 @@ body::-webkit-scrollbar {
       cursor: pointer; }
       .account-nav__modules--link:hover {
         background-color: var(--white3); }
+      .account-nav__modules--link .fav-amount-span,
+      .account-nav__modules--link .cart-amount-span {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -.5rem;
+        right: -.5rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        background-color: var(--main); }
       .account-nav__modules--link .user-icon,
       .account-nav__modules--link .cart-icon,
       .account-nav__modules--link .heart-icon {
@@ -477,14 +497,14 @@ body::-webkit-scrollbar {
 .main-logo {
   width: 12rem; }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 500px) {
   .account-nav__modules {
     justify-content: flex-end; }
   .mobile-nav-logo {
     display: none; } }
 
 .fav-popup {
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .propose__title {
   display: flex;
@@ -1269,6 +1289,55 @@ body::-webkit-scrollbar {
     text-align: center; }
   .main .products-area h2 {
     text-align: center; } }
+
+.fav-item-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem; }
+  .fav-item-list__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    width: 35rem; }
+    .fav-item-list__item .count {
+      font-size: var(--medium); }
+    .fav-item-list__item .right-items {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column; }
+      .fav-item-list__item .right-items .price {
+        font-size: var(--large); }
+      .fav-item-list__item .right-items .category {
+        font-size: var(--medium);
+        color: var(--grey);
+        padding-top: .5rem; }
+    .fav-item-list__item .remove-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: var(--big);
+      cursor: pointer;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: none;
+      border: none;
+      transition: background .2s ease; }
+      .fav-item-list__item .remove-button:hover {
+        background: var(--white3); }
+    .fav-item-list__item img {
+      width: 15rem;
+      max-width: 13rem;
+      padding: 0 2rem;
+      border-radius: 2rem;
+      max-height: 10rem;
+      object-fit: cover; }
+
+@media screen and (max-width: 500px) {
+  .fav-item-list__item {
+    width: 25rem; } }
 
 * {
   box-sizing: border-box;

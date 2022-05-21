@@ -13,8 +13,8 @@
     z-index: 199;
     &__modules {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         &--container {
             display: flex;
             align-items: center;
@@ -25,6 +25,7 @@
             transition: width .2s ease;
         }
         &--link {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,6 +36,19 @@
             cursor: pointer;
             &:hover {
                 background-color: var(--white3);
+            }
+            .fav-amount-span,
+            .cart-amount-span {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: -.5rem;
+                right: -.5rem;
+                width: 1.8rem;
+                height: 1.8rem;
+                border-radius: 50%;
+                background-color: var(--main);
             }
             .user-icon,
             .cart-icon,
@@ -67,7 +81,7 @@
     width: 12rem;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 500px) {
     .account-nav {
         &__modules {
             justify-content: flex-end;
@@ -79,5 +93,5 @@
 }
 
 .fav-popup {
-    overflow-y: scroll;
+    overflow-y: auto;
 }

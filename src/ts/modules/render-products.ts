@@ -1,4 +1,5 @@
 import { products, ProductInterface } from './constants/products.js';
+import { Elements } from './constants/ProductElements.js';
 
 export const rendererFilteredProducts = (filter: string) => {
     const recommendedSections = Array.from(document.querySelectorAll('.propose__modules'))
@@ -28,6 +29,22 @@ export const rendererAllProducts = () => {
     })
 }
 
+export const renderFavProducts = () => {
+    const favArea = document.querySelector('.fav-item-list')
+    const favButton: HTMLButtonElement = document.querySelector(Elements.favButton);
+
+    products.forEach((product: ProductInterface) => {
+        let box: HTMLDivElement
+
+            if (favButton.dataset.selected === 'true') {
+                box = document.createElement('div')
+                box.classList.add('product-main-box')
+                box.innerHTML = buildFavProduct(product)
+                favArea.appendChild(box)
+            }
+    })
+}
+
 const buildProduct = ({id, category, description, images, price, brand}: ProductInterface) =>  {
     return `
         <div class="propose__modules--box" id="${id}" data-brand="${brand}" data-category="${category}">
@@ -46,5 +63,23 @@ const buildProduct = ({id, category, description, images, price, brand}: Product
                 </div>
             </div>
         </div>
+    `
+}
+
+const buildFavProduct = ({id, category, description, images, price}: ProductInterface) =>  {
+    return `
+    <div class="fav-item-list__item" id="${id}">
+    <p class="count">${id}</p>
+    <img src="${images}" alt="${description}">
+
+    <div class="right-items">
+        <p class="price">${price}$</p>
+        <p class="category">${category}</p>
+    </div>
+
+    <button class="remove-button">
+    <i class='bx bx-x'></i>
+    </button>
+    </div>
     `
 }

@@ -1,10 +1,12 @@
 import { getLS, saveInLS } from "./storage/storage-utils.js"
 import { Elements } from "./constants/ProductElements.js"
-
-const FAVS_LS = 'favs'
+import { renderFavProducts } from "./render-products.js"
 
 export const favButtonEffect = () => {
 	const productArea = Array.from(document.querySelectorAll(Elements.product));
+	const favArea: HTMLDivElement = document.querySelector('.fav-item-list')
+	let amount = favArea.getElementsByClassName('product-main-box');
+	const favPopupEmpty: HTMLDivElement = document.querySelector('.fav-popup__empty')
 
 	for (let i = 0; i < productArea.length; i++) {
 		class productElements {
@@ -19,9 +21,25 @@ export const favButtonEffect = () => {
 			} else {
 				addToFav(module.favButton);
 			}
+
+			if (amount.length) {
+				favPopupEmpty.style.display = 'block'
+				favArea.style.display = 'none'
+			} else {
+				favPopupEmpty.style.display = 'none'
+				favArea.style.display = 'block'
+			}
+			console.log(amount.length.toString())
 		});
 	}
 };
+
+const addAmount = () => {
+	const favArea: HTMLDivElement = document.querySelector('.fav-item-list')
+	let amount = favArea.getElementsByTagName('div');
+	const counter = document.querySelector('.fav-amount-span')
+	counter.textContent = amount.length.toString()
+}
 
 const removeFromFav = (node: HTMLButtonElement) => {
 	node.dataset.selected = 'false';
@@ -35,6 +53,8 @@ const addToFav = (node: HTMLButtonElement) => {
 	node.innerHTML = Elements.solidHeart;
 	node.classList.add(Elements.toggleButton);
 	addToLS(getItemName(node));
+	renderFavProducts()
+	addAmount()
 }
 
 const getItemName = ((node: HTMLButtonElement): string => {
@@ -42,12 +62,15 @@ const getItemName = ((node: HTMLButtonElement): string => {
 })
 
 const removeFromLS = (name: string) => {
+	const FAVS_LS = 'favs'
 	const storage = getLS(FAVS_LS);
 	storage.splice(name.indexOf(name));
+	localStorage.removeItem(name);
 	saveInLS(FAVS_LS, storage);
 }
 
 const addToLS = (name: string) => {
+	const FAVS_LS = 'favs'
 	const storage = getLS(FAVS_LS);
 	storage.push(name);
 	saveInLS(FAVS_LS, storage);
