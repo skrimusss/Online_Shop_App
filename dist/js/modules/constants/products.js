@@ -470,4 +470,232 @@ export const products = [
             'https://img01.ztat.net/article/spp-media-p1/00ddd911f9804c49affc82b262106dd9/37e7f744de6445a9ac0cd93184baa104.jpg?imwidth=300'
         ],
     },
+    {
+        id: 40,
+        price: 419,
+        category: 'Man',
+        brand: 'Polo ralph lauren',
+        filter: 'clothes',
+        description: 'PACKABLE QUILTED VEST',
+        color: 'black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/a6d4a5f8dbd83f7da57dcce1b8ca5220/0e1f3050f1e94cb5ba81115bb3857f01.jpg?imwidth=762'
+        ],
+    },
+    {
+        id: 41,
+        price: 230,
+        category: 'Man',
+        brand: 'Hugo',
+        filter: 'clothes',
+        description: 'BENTINO - vest',
+        color: 'black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/59c7c255418449ffb1cbac13e4b93a19/d2918231e87342a1bba4d545b7dc73fa.jpg?imwidth=1800'
+        ],
+    },
+    {
+        id: 42,
+        price: 189,
+        category: 'Man',
+        brand: 'Emporio armani',
+        filter: 'clothes',
+        description: 'TROUSER - Training pants',
+        color: 'black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/b2c5cdbba8554beea5d5234a8dcd66de/961454b6b9ff424bb254f2cfac1d5672.jpg?imwidth=1800'
+        ],
+    },
+    {
+        id: 43,
+        price: 230,
+        category: 'Man',
+        brand: 'Emporio armani',
+        filter: 'clothes',
+        description: 'TROUSER - Training pants',
+        color: 'Gold',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/1bc8cca0c50146d2b8216aae830bbaa0/dd073ee7002440df99212b7500d0c18f.jpg?imwidth=1800'
+        ],
+    },
+    {
+        id: 44,
+        price: 60,
+        category: 'Man',
+        brand: 'Polo ralph lauren',
+        filter: 'caps',
+        description: 'COTTON CHINO BASEBALL CAP',
+        color: 'Gold',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/a9ae6518dfcb3ec78dba9ebc3201d48d/8c9848c3969e46729ffeb11c8d8b6cf7.jpg?imwidth=1800'
+        ],
+    },
+    {
+        id: 45,
+        price: 130,
+        category: 'Man',
+        brand: 'Polo ralph lauren',
+        filter: 'clothes',
+        description: 'CUSTOM CREWNECK - T-shirt basic',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/f321ab7f6c703ac89429473d2d98ff1e/63f3d8309ecc4d6eb60a1e183bd03338.jpg?imwidth=1800&filter=packshot'
+        ],
+    },
+    {
+        id: 46,
+        price: 189,
+        category: 'Unisex',
+        brand: 'Nike sportswear',
+        filter: 'sneakers',
+        description: 'AIR FORCE 1 - Low sneakers',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/553c5bd966ed3085afe815aed8fae88a/36db4e188f9b40e1b5b4adc8c2e9b6ee.jpg?imwidth=1800&filter=packshot'
+        ],
+    },
+    {
+        id: 47,
+        price: 189,
+        category: 'Unisex',
+        brand: 'Nike sportswear',
+        filter: 'sneakers',
+        description: 'AIR FORCE 1 - Low sneakers',
+        color: 'Black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/e4b6428538bb3d78939cd84e1d78281d/321557a3bc8446409957fc8da11d45c1.jpg?imwidth=1800&filter=packshot'
+        ],
+    },
+    {
+        id: 48,
+        price: 139,
+        category: 'Man',
+        brand: 'Tommy hilfiger',
+        filter: 'clothes',
+        description: 'Original stretch',
+        color: 'Black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/43f8d32b965d3a3cb916bbaa4b7026b0/ddf8803819614bd28e7e10917ec52bf6.jpg?imwidth=300'
+        ],
+    },
+    {
+        id: 49,
+        price: 239,
+        category: 'Man',
+        brand: 'Polo ralph lauren',
+        filter: 'clothes',
+        description: 'CUSTOM SLIM FIT MESH SHIRT',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/c1a81785d53c3e24899eada586b71841/4524d7dc686b47348a6c430d2c44f2f1.jpg?imwidth=300'
+        ],
+    },
+    {
+        id: 50,
+        price: 259,
+        category: 'Man',
+        brand: 'Polo ralph lauren',
+        filter: 'clothes',
+        description: 'SLIM FIT STRETCH POPLIN SHIRT',
+        color: 'Black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/f59c673553654d908541f71ad633e3fa/3cdb2f986f89450f9dd60d9bf1b28bda.jpg?imwidth=300&filter=packshot'
+        ],
+    },
+    {
+        id: 51,
+        price: 299,
+        category: 'Man',
+        brand: 'Nike sportswear',
+        filter: 'sneakers',
+        description: 'Air max 97 - Low sneakers',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/b0e214230cc53c2992b6b62854716fd1/52d04c679ff542609c7a3fb782463a4c.jpg?imwidth=300&filter=packshot'
+        ],
+    },
+    {
+        id: 52,
+        price: 259,
+        category: 'Man',
+        brand: 'Nike sportswear',
+        filter: 'sneakers',
+        description: 'Air max 270 - Low sneakers',
+        color: 'Black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/3cf7e79923b83c1da9f8e190a78df533/b8d578124c5e4ae1a4ce5aff11c17280.jpg?imwidth=300&filter=packshot'
+        ],
+    },
+    {
+        id: 53,
+        price: 139,
+        category: 'Unisex',
+        brand: 'Nike sportswear',
+        filter: 'sneakers',
+        description: 'BLAZER MID 77 UNISEX',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/b1476bda9548395fb1f1257ea3508966/dba2a5f279a448faaa255aa87ecd8890.jpg?imwidth=300'
+        ],
+    },
+    {
+        id: 54,
+        price: 229,
+        category: 'Unisex',
+        brand: 'Nike sportswear',
+        filter: 'sneakers',
+        description: 'Air max 90 - Low sneakers',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/eed502ecc114421890d294861dc026d5/54925d51f6c94312b4cc622fe1825b49.jpg?imwidth=300'
+        ],
+    },
+    {
+        id: 55,
+        price: 219,
+        category: 'Man',
+        brand: 'Jordan',
+        filter: 'sneakers',
+        description: 'Max aura 3 - High sneakers',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/c276646fa7354e17b04a0c68b43b9dd6/4f8d611dada14faaba46486a2dadf932.jpg?imwidth=300&filter=packshot'
+        ],
+    },
+    {
+        id: 56,
+        price: 179,
+        category: 'Man',
+        brand: 'Polo ralph lauren',
+        filter: 'sneakers',
+        description: 'HERITAGE COURT II LEATHER SNEAKERS',
+        color: 'White',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/3f915f4e7d67494a9fbe0bf44941bd1c/99a2d5246bd34144b2196643e4894d44.jpg?imwidth=300&filter=packshot'
+        ],
+    },
+    {
+        id: 57,
+        price: 279,
+        category: 'Man',
+        brand: 'Nike sportswear',
+        filter: 'sneakers',
+        description: 'AIR MAX 97 - Low sneakers',
+        color: 'Black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/b68d9c8f7cc73214b23de81813b5f6bf/9993b098b1b2464092781c5448b5a623.jpg?imwidth=300&filter=packshot'
+        ],
+    },
+    {
+        id: 57,
+        price: 39,
+        category: 'Man',
+        brand: 'Adidas',
+        filter: 'accesories',
+        description: 'ADILETTE LITE - black',
+        color: 'Black',
+        images: [
+            'https://img01.ztat.net/article/spp-media-p1/af9214f314ab3df8b445415bfa67b1fe/83eb83195fcf447883936f6ced8e57a0.jpg?imwidth=300'
+        ],
+    },
 ];
