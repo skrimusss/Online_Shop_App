@@ -1,5 +1,5 @@
 import { products } from './constants/products.js';
-import { Elements } from './constants/ProductElements.js';
+import { Elements } from './types/ProductElements.js';
 export const rendererFilteredProducts = (filter) => {
     const recommendedSections = Array.from(document.querySelectorAll('.propose__modules'));
     let filteredProducts = products.filter(product => product.filter === filter);
@@ -26,8 +26,8 @@ export const rendererAllProducts = () => {
     });
 };
 export const renderFavProducts = () => {
-    const favArea = document.querySelector('.fav-item-list');
     const favButton = document.querySelector(Elements.favButton);
+    const favArea = document.querySelector('.fav-item-list');
     products.forEach((product) => {
         let box;
         if (favButton.dataset.selected === 'true') {
@@ -37,6 +37,29 @@ export const renderFavProducts = () => {
             favArea.appendChild(box);
         }
     });
+    const productBox = document.querySelectorAll('.product-main-box');
+    for (let i = 0; i < productBox.length; i++) {
+        class favProductBox {
+            constructor() {
+                this.removeButton = productBox[i].querySelector('.remove-button');
+            }
+        }
+        const module = new favProductBox;
+        const removeItem = () => {
+            const removeFavItem = module.removeButton.closest('.product-main-box');
+            removeFavItem.style.transform = 'translateX(-10rem)';
+            removeFavItem.style.opacity = '0';
+            setTimeout(() => {
+                removeFavItem.remove();
+            }, 300);
+        };
+        module.removeButton.addEventListener('click', () => {
+            removeItem();
+            console.log('trybi');
+            const favElements = favArea.getElementsByClassName('product-main-box').length;
+            const counter = document.querySelector('.fav-amount-span').textContent = favElements.toString();
+        });
+    }
 };
 const buildProduct = ({ id, category, description, images, price, brand }) => {
     return `
@@ -70,7 +93,7 @@ const buildFavProduct = ({ id, category, description, images, price }) => {
     </div>
 
     <button class="remove-button">
-    <i class='bx bx-x'></i>
+        <i class='bx bx-x'></i>
     </button>
     </div>
     `;

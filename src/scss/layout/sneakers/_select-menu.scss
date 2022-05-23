@@ -227,6 +227,7 @@
         height: auto;
         overflow-y: hidden;
         width: 100%;
+        transform: translateX(-100%);
         &__modules {
             grid-template-columns: repeat(1, 1fr);
             gap: 1rem;

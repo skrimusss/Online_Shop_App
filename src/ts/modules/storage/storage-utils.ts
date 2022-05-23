@@ -1,4 +1,4 @@
-export const getLS = ((name: string): Array<string> => {
+export const getLS = ((name: string) => {
     return JSON.parse(localStorage.getItem(name)) ?? [];
 })
 

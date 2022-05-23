@@ -1,5 +1,5 @@
 import { products, ProductInterface } from './constants/products.js';
-import { Elements } from './constants/ProductElements.js';
+import { Elements } from './types/ProductElements.js';
 
 export const rendererFilteredProducts = (filter: string) => {
     const recommendedSections = Array.from(document.querySelectorAll('.propose__modules'))
@@ -30,8 +30,8 @@ export const rendererAllProducts = () => {
 }
 
 export const renderFavProducts = () => {
-    const favArea = document.querySelector('.fav-item-list')
     const favButton: HTMLButtonElement = document.querySelector(Elements.favButton);
+    const favArea: HTMLDivElement = document.querySelector('.fav-item-list')
 
     products.forEach((product: ProductInterface) => {
         let box: HTMLDivElement
@@ -42,7 +42,37 @@ export const renderFavProducts = () => {
                 box.innerHTML = buildFavProduct(product)
                 favArea.appendChild(box)
             }
-    })
+        })
+
+	const productBox = document.querySelectorAll('.product-main-box')
+
+    for (let i = 0; i < productBox.length; i++) {
+		class favProductBox {
+			removeButton: HTMLButtonElement = productBox[i].querySelector('.remove-button')
+		}
+
+		const module = new favProductBox
+
+        const removeItem = () => {
+            const removeFavItem: HTMLDivElement = module.removeButton.closest('.product-main-box')
+            removeFavItem.style.transform = 'translateX(-10rem)'
+            removeFavItem.style.opacity = '0'
+
+            setTimeout(() => {
+                removeFavItem.remove()
+            }, 300);
+        }
+
+		module.removeButton.addEventListener('click', () => {
+            removeItem()
+			console.log('trybi')
+
+            const favElements = favArea.getElementsByClassName('product-main-box').length
+
+			const counter = document.querySelector('.fav-amount-span').textContent = favElements.toString()
+		})
+	}
+
 }
 
 const buildProduct = ({id, category, description, images, price, brand}: ProductInterface) =>  {
@@ -78,7 +108,7 @@ const buildFavProduct = ({id, category, description, images, price}: ProductInte
     </div>
 
     <button class="remove-button">
-    <i class='bx bx-x'></i>
+        <i class='bx bx-x'></i>
     </button>
     </div>
     `

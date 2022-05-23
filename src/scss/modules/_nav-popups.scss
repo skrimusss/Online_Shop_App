@@ -69,7 +69,7 @@
     transform: translateY(0);
     top: 6rem;
     right: 0;
-    max-height: 40rem;
+    max-height: 46rem;
     padding: 2rem;
     min-width: 25rem;
     border-radius: 1rem;
@@ -77,6 +77,46 @@
     box-shadow: var(--box-shadow);
     transition: visibility .2s ease, opacity .2s ease, transform .2s ease;
     z-index: 199;
+    .fav-item-list {
+        &__heading {
+            font-size: var(--large);
+            color: white;
+            padding: 1rem 0;
+        }
+        .product-main-box {
+            transition: opacity .2s ease, transform .2s ease;
+        }
+        &__clear-fav-button {
+            position: relative;
+            margin: .5rem 0;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            border: none;
+            cursor: pointer;
+            background: none;
+            font-size: var(--medium);
+            text-align: left;
+            color: var(--text);
+            transition: padding-left .2s ease, background .2s;
+            &::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 2px;
+                background-color: var(--main);
+                transition: width .2s ease;
+            }
+            &:hover::after {
+                width: 4px;
+            }
+            &:hover {
+                padding-left: 3rem;
+                background: var(--white-gradient);
+            }
+        }
+    }
     &::-webkit-scrollbar-thumb {
         background-color: var(--white3);
         border-radius: 20rem;

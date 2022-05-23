@@ -9,9 +9,9 @@ import { selectFiltersLogic } from "./modules/select-filter.js";
 import { loader } from "./modules/loader.js";
 import { favButtonEffect } from "./modules/favourite.js";
 export const renderAllPagesComponents = () => {
+    loader();
     navLogic();
     scrollButtonFunctions();
-    loader();
     favButtonEffect();
 };
 export const renderMainPage = () => {

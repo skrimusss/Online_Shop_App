@@ -48,14 +48,22 @@
                 </p>
 
                 <p class="account-nav__modules--link fav-link">
+
                     <span class="fav-amount-span">0</span>
+
                     <i class="heart-icon">
                         <i class='bx bx-heart'></i>
                     </i>
+
                     <div aria-expanded="false" class="fav-popup">
-                        <p class="fav-popup__icon"><i class="uil uil-confused"></i></p>
-                        <p class="fav-popup__text">Favourite list is empty</p>
-                        <button class="fav-popup__button">Add new products!</button>
+                        <div class="fav-popup__empty" style="display: none;">
+                            <p class="fav-popup__text">Favourite list is empty</p>
+                            <button class="fav-popup__button">Add new products!</button>
+                        </div>
+
+                        <div style="display: block;" class="fav-item-list">
+                            <h3>Your favourite list</h3>
+                        </div>
                     </div>
                 </p>
 
