@@ -709,4 +709,160 @@ export const products: ProductInterface[] = [
 			'https://img01.ztat.net/article/spp-media-p1/af9214f314ab3df8b445415bfa67b1fe/83eb83195fcf447883936f6ced8e57a0.jpg?imwidth=300'
 		],
 	},
+	{
+		id: 58,
+		price: 239,
+		category: 'Man',
+		brand: 'Nike sportswear',
+		filter: 'accesories',
+		description: 'AIR MORE UPTEMPO 96',
+		color: 'White',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/bfe6ef9001bd4f7496bdb24dac45b5bb/aadf699827a548c293ed083e6463558f.jpg?imwidth=300'
+		],
+	},
+	{
+		id: 59,
+		price: 439,
+		category: 'Man',
+		brand: 'Moschino',
+		filter: 'accesories',
+		description: 'Belt - black',
+		color: 'Black',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/e19f9eda1ec53cc59f86085c037801f6/addac512b58b4053aee0e4fee3fed7ff.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 60,
+		price: 239,
+		category: 'Man',
+		brand: 'Just Cavalli',
+		filter: 'accesories',
+		description: 'Belt - black',
+		color: 'Black',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/389cef90d65943c6993ed7bfc3692289/ff73c6a5f9df4ae5883456129169d95b.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 61,
+		price: 339,
+		category: 'Man',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Belt - black',
+		color: 'Black',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/7de3b5b577d74ddea2f440583cdd31ad/e67d57962d114703824f51c1766638af.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 62,
+		price: 539,
+		category: 'Man',
+		brand: 'Bally',
+		filter: 'accesories',
+		description: 'Belt - black',
+		color: 'Black',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/554c1ba625e544768716be433bdf9da7/e42c628b2e0d4f39ae7e828326eb5571.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 63,
+		price: 539,
+		category: 'Man',
+		brand: 'Karl lagerfeld',
+		filter: 'accesories',
+		description: 'Belt - black',
+		color: 'Black',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/df581cc51d584dc299a1420b452bd2b8/3b62519e287441968c84c9f7071f3e3d.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 64,
+		price: 1539,
+		category: 'Unisex',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Chain - Gold',
+		color: 'Gold',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/76386b21edd64e05825e63430a6880eb/c3b9a7e6b8164e738ef7721cde793c28.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 65,
+		price: 1299,
+		category: 'Unisex',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Chain - Gold',
+		color: 'Gold',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/bab43dea81e04b9da497507a3b0898ab/5f26d2314d234a8a86f311e951ba85ea.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 66,
+		price: 1099,
+		category: 'Unisex',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Bracelet - Gold',
+		color: 'Gold',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/cffd9eb885a73787960d80f6b0553f97/1a854eb6482e46bfae0242f3e8e97f73.jpg?imwidth=300'
+		],
+	},
+	{
+		id: 67,
+		price: 1899,
+		category: 'Unisex',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Chain - Gold',
+		color: 'Gold',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/fc53466be38247f6a743292f64e335d5/bda5f5f9571b4750b94d74cd45a228c6.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 68,
+		price: 1299,
+		category: 'Unisex',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Chain - Gold',
+		color: 'Gold',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/55bb6d26c48347ea88064ee95820f8bc/fdf112f1ddd14de2a2304fe6c0eabd3a.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 69,
+		price: 1199,
+		category: 'Unisex',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Chain - Gold',
+		color: 'Gold',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/77667353f5324569843c9eaf73d283ff/18367122da8e4d9eb26258408e97d32d.jpg?imwidth=300&filter=packshot'
+		],
+	},
+	{
+		id: 70,
+		price: 2199,
+		category: 'Unisex',
+		brand: 'Versace',
+		filter: 'accesories',
+		description: 'Chain - Gold',
+		color: 'Gold',
+		images: [
+			'https://img01.ztat.net/article/spp-media-p1/e643bd62ba0238fbadd39781c28f0126/241f81a1817b4357b6a3aa392e9400cc.jpg?imwidth=300'
+		],
+	},
 ]
